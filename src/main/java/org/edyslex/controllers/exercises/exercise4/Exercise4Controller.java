@@ -10,30 +10,26 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import org.edyslex.controllers.students.BaseController;
+import org.edyslex.controllers.exercises.ExerciseBaseController;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
 
-public class Exercise4Controller extends BaseController implements Initializable {
+public class Exercise4Controller extends ExerciseBaseController implements Initializable {
 
     @FXML
-    public Label lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12,
+    private Label lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12,
             lbl13, lbl14, lbl15, lbl16, lbl17, lbl18, lbl19, lbl20;
-    public Label ansLbl1, ansLbl2, ansLbl3, ansLbl4, ansLbl5, ansLbl6, ansLbl7, ansLbl8,
+    @FXML
+    private Label ansLbl1, ansLbl2, ansLbl3, ansLbl4, ansLbl5, ansLbl6, ansLbl7, ansLbl8,
             ansLbl9, ansLbl10, ansLbl11, ansLbl12, ansLbl13, ansLbl14, ansLbl15, ansLbl16,
             ansLbl17, ansLbl18, ansLbl19, ansLbl20;
 
@@ -60,50 +56,9 @@ public class Exercise4Controller extends BaseController implements Initializable
 
     private HashMap<Label, Label> completedBy = new HashMap<Label, Label>();
 
-    private Alert rightAlert = new Alert(Alert.AlertType.NONE);
-    private Alert wrongAlert = new Alert(Alert.AlertType.NONE);
-    private Image rightSymbolImage = new Image("images/happyFace.png");
-    private Image wrongSymbolImage = new Image("images/sadFace.png");
-    private ImageView rightImageView = new ImageView(rightSymbolImage);
-    private ImageView wrongImageView = new ImageView(wrongSymbolImage);
-
-    private Double labelOffsetX;
-    private Double labelOffsetY;
-    private Double initialX;
-    private Double initialY;
-    private String labelContent;
-    private Label currentLabel;
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){
-        rightAlert.initStyle(StageStyle.UNDECORATED);
-        wrongAlert.initStyle(StageStyle.UNDECORATED);
-
-        rightImageView.setFitWidth(170);
-        rightImageView.setFitHeight(170);
-        rightImageView.setLayoutX(5);
-        rightImageView.setLayoutY(5);
-        wrongImageView.setFitWidth(170);
-        wrongImageView.setFitHeight(170);
-        wrongImageView.setLayoutX(5);
-        wrongImageView.setLayoutY(5);
-
-        DialogPane dialogPaneRight = rightAlert.getDialogPane();
-        dialogPaneRight.getStylesheets().add("css/style.css");
-        dialogPaneRight.getChildren().clear();
-        dialogPaneRight.getChildren().add(rightImageView);
-        dialogPaneRight.getButtonTypes().add(ButtonType.CLOSE);
-        dialogPaneRight.setPrefWidth(180);
-        dialogPaneRight.setPrefHeight(180);
-
-        DialogPane dialogPaneWrong = wrongAlert.getDialogPane();
-        dialogPaneWrong.getStylesheets().add("css/style.css");
-        dialogPaneWrong.getChildren().clear();
-        dialogPaneWrong.getChildren().add(wrongImageView);
-        dialogPaneWrong.getButtonTypes().add(ButtonType.CLOSE);
-        dialogPaneWrong.setPrefWidth(180);
-        dialogPaneWrong.setPrefHeight(180);
-
+        super.initialize();
 
         List<Label> labels = new ArrayList<Label>();
         labels.add(lbl1); labels.add(lbl2); labels.add(lbl3); labels.add(lbl4);
