@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.edyslex.controllers.students.MenuController">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to right top, #00ead3, #48f1c3, #70f7b2, #94fca1, #b7ff90);;">
+         <children>
+            <Label layoutX="52.0" layoutY="303.0" text="Edyslex" textFill="#005f99">
+               <font>
+                  <Font name="Rockwell" size="80.0" />
+               </font>
+            </Label>
+            <Label layoutX="161.0" layoutY="409.0" text="Învățăm împreună" textFill="#005f99">
+               <font>
+                  <Font name="Cambria Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="400.0" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #fff5b7;">
+         <children>
+            <Button layoutX="200.0" layoutY="270.0" mnemonicParsing="false" onAction="#switchToExercises" prefHeight="100.0" prefWidth="400.0" styleClass="menuButtons" stylesheets="@../css/style.css" text="📖   EXERCIȚII" textFill="#005f99">
+               <font>
+                  <Font name="Cambria Bold" size="40.0" />
+               </font>
+            </Button>
+            <Button layoutX="200.0" layoutY="430.0" mnemonicParsing="false" onAction="#switchToStudents" prefHeight="100.0" prefWidth="400.0" styleClass="menuButtons" stylesheets="@../css/style.css" text="👤   ELEVI" textFill="#005f99">
+               <font>
+                  <Font name="Cambria Bold" size="40.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Pane fx:id="stageBar" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0">
+         <children>
+            <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../css/style.css" text="X" textFill="#005f99">
+               <font>
+                  <Font name="Rockwell Extra Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="minimizeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../css/style.css" text="—" textFill="#005f99">
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </children>
+</AnchorPane>
