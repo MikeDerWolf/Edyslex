@@ -127,11 +127,7 @@ public class ReportsController extends BaseController {
     }
 
     public void switchToStudents(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("scenes/students/students.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+        switchScene(event, "scenes/students/students.fxml");
     }
-
 
 }

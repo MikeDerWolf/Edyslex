@@ -1,5 +1,6 @@
 package org.edyslex.controllers.exercises;
 
+import javafx.animation.PauseTransition;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
@@ -7,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 import org.edyslex.controllers.students.BaseController;
 
 public class ExerciseBaseController extends BaseController {
@@ -53,5 +55,34 @@ public class ExerciseBaseController extends BaseController {
         dialogPaneWrong.getButtonTypes().add(ButtonType.CLOSE);
         dialogPaneWrong.setPrefWidth(180);
         dialogPaneWrong.setPrefHeight(180);
+    }
+
+    public void displayFeedback(Alert alert){
+        PauseTransition delay = new PauseTransition(Duration.seconds(1.4));
+        delay.setOnFinished(e -> alert.close());
+
+        alert.show();
+        delay.play();
+
+    }
+
+    public void centerImage(ImageView imageView) {
+        Image img = imageView.getImage();
+        if (img != null) {
+            double w = 0;
+            double h = 0;
+
+            double ratioX = imageView.getFitWidth() / img.getWidth();
+            double ratioY = imageView.getFitHeight() / img.getHeight();
+
+            double reduceCoeff = Math.min(ratioX, ratioY);
+
+            w = img.getWidth() * reduceCoeff;
+            h = img.getHeight() * reduceCoeff;
+
+            imageView.setX((imageView.getFitWidth() - w) / 2);
+            imageView.setY((imageView.getFitHeight() - h) / 2);
+
+        }
     }
 }

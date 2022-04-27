@@ -2,11 +2,16 @@ package org.edyslex.controllers.students;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class BaseController {
 
@@ -36,5 +41,16 @@ public class BaseController {
     public void minimizeWindow(ActionEvent event){
         stage = (Stage)((Button)event.getSource()).getScene().getWindow();
         stage.setIconified(true);
+    }
+
+    public void switchToMenu(ActionEvent event) throws IOException {
+        switchScene(event, "scenes/menu.fxml");
+    }
+
+    public void switchScene(ActionEvent event, String filename) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource(filename));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

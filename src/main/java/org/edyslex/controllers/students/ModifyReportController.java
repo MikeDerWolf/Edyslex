@@ -214,5 +214,4 @@ public class ModifyReportController extends BaseController implements Initializa
         stage.show();
     }
 
-
 }

@@ -181,5 +181,4 @@ public class ViewReportController extends BaseController {
         stage.show();
     }
 
-
 }

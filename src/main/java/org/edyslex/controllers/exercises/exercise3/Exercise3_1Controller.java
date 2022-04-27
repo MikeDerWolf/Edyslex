@@ -1,22 +1,13 @@
 package org.edyslex.controllers.exercises.exercise3;
 
-import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
-import javafx.util.Duration;
 import org.edyslex.controllers.exercises.ExerciseBaseController;
 
 import java.io.IOException;
@@ -174,61 +165,12 @@ public class Exercise3_1Controller extends ExerciseBaseController implements Ini
 
     }
 
-    public void displayFeedback(Alert alert){
-        PauseTransition delay = new PauseTransition(Duration.seconds(1.4));
-        delay.setOnFinished(e -> alert.close());
-
-        alert.show();
-        delay.play();
-
-    }
-
-    public void centerImage(ImageView imageView) {
-        Image img = imageView.getImage();
-        if (img != null) {
-            double w = 0;
-            double h = 0;
-
-            double ratioX = imageView.getFitWidth() / img.getWidth();
-            double ratioY = imageView.getFitHeight() / img.getHeight();
-
-            double reducCoeff = 0;
-            if(ratioX >= ratioY) {
-                reducCoeff = ratioY;
-            } else {
-                reducCoeff = ratioX;
-            }
-
-            w = img.getWidth() * reducCoeff;
-            h = img.getHeight() * reducCoeff;
-
-            imageView.setX((imageView.getFitWidth() - w) / 2);
-            imageView.setY((imageView.getFitHeight() - h) / 2);
-
-        }
-    }
-
     public void switchToExercise3(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(
-                getClass().getClassLoader().getResource("scenes/exercises/exercise3/exercise3_menu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-
-    public void switchToMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("scenes/menu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+        switchScene(event, "scenes/exercises/exercise3/exercise3_menu.fxml");
     }
 
     public void reset(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(
-                getClass().getClassLoader().getResource("scenes/exercises/exercise3/exercise3_1.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+        switchScene(event, "scenes/exercises/exercise3/exercise3_1.fxml");
     }
 
 }

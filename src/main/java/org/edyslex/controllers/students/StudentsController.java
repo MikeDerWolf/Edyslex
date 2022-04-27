@@ -51,18 +51,8 @@ public class StudentsController extends BaseController implements Initializable 
                         "from Student ORDER BY lastName, firstName, dateOfBirth DESC", Student.class).list()));
     }
 
-    public void switchToMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("scenes/menu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-
     public void switchToAddStudent(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("scenes/students/addStudent.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+        switchScene(event, "scenes/students/addStudent.fxml");
     }
 
     public void switchToViewStudent(ActionEvent event) throws IOException {
@@ -142,7 +132,5 @@ public class StudentsController extends BaseController implements Initializable 
             stage.show();
         }
     }
-
-
 
 }

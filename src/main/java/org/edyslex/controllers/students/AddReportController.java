@@ -198,5 +198,4 @@ public class AddReportController extends BaseController implements Initializable
         stage.show();
     }
 
-
 }
