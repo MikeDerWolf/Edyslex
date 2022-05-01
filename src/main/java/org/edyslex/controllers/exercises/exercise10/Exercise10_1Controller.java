@@ -22,7 +22,7 @@ public class Exercise10_1Controller extends ExerciseBaseController implements In
     private Label ansLbl1, ansLbl2, ansLbl3, ansLbl4, ansLbl5, ansLbl6, ansLbl7, ansLbl8;
 
     private List<String> tags = new ArrayList<String>(Arrays.asList(
-            "pen-tru că fa-ce co-zo-nac.", "pen-tru că a spart ceș-cu-ța.", "pen-tru că es-te bolnav.",
+            "pen-tru că fa-ce co-zo-nac.", "pen-tru că a spart ceș-cu-ța.", "pen-tru că es-te bol-nav.",
             "pen-tru că es-te proas-pă-tă.", "pen-tru că es-te ră-gu-șit.", "pen-tru că s-a ju-cat pi-si-ca cu el.",
             "pen-tru că îi plac bas-me-le.", "pen-tru că a căl-cat în no-roi."));
 
@@ -34,7 +34,7 @@ public class Exercise10_1Controller extends ExerciseBaseController implements In
 
         labelsMap.put(lbl1, "pen-tru că fa-ce co-zo-nac.");
         labelsMap.put(lbl2, "pen-tru că a spart ceș-cu-ța.");
-        labelsMap.put(lbl3, "pen-tru că es-te bolnav.");
+        labelsMap.put(lbl3, "pen-tru că es-te bol-nav.");
         labelsMap.put(lbl4, "pen-tru că es-te proas-pă-tă.");
         labelsMap.put(lbl5, "pen-tru că es-te ră-gu-șit.");
         labelsMap.put(lbl6, "pen-tru că s-a ju-cat pi-si-ca cu el.");

@@ -21,7 +21,7 @@
 	-fx-background-insets: 0;
 	-fx-border-radius: 10;
 	-fx-background-radius: 10;
-
+    -fx-text-fill: #000000;
 }
 
 .generalButton:hover{
@@ -367,22 +367,34 @@
 
 .imageViewLabel{
 	-fx-background-radius: 10;
+	-fx-background-color: #ffffff;
 	-fx-border-width: 1.5;
 	-fx-border-radius: 10;
 	-fx-border-color: #005f99;
+	-fx-text-fill: #000000;
 }
 
 .squareLabel{
 	-fx-border-width: 1.5;
 	-fx-border-color: #005f99;
+	-fx-background-color: #f2f2f2;
+	-fx-text-fill: #000000;
+}
+
+.squareLabelSlot{
+	-fx-border-width: 1.5;
+	-fx-border-color: #005f99;
+	-fx-background-color: #ffffff;
+	-fx-text-fill: #000000;
 }
 
 .answerLabel{
 	-fx-background-radius: 10;
-	-fx-background-color: rgb(194,193,225);
+	-fx-background-color: #ffffff;
 	-fx-border-width: 1.5;
 	-fx-border-radius: 10;
 	-fx-border-color: #807DD7;
+	-fx-text-fill: #000000;
 }
 
 
