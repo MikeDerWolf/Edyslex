@@ -29,7 +29,7 @@
             </Button>
             <Pane layoutX="50.0" layoutY="50.0" prefHeight="650.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../../css/style.css">
                <children>
-                  <Label layoutX="20.0" layoutY="10.0" text="Formează cuvintele așa cum le auzi! Spune o propoziție pentru fiecare!" textFill="#005f99">
+                  <Label layoutX="20.0" layoutY="10.0" text="Formează cuvintele așa cum le auzi! Spune o propoziție pentru fiecare!">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
@@ -38,12 +38,12 @@
                      <children>
                         <Pane fx:id="pane1" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl1" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl1" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl2" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl2" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -52,12 +52,12 @@
                         </Pane>
                         <Pane fx:id="pane2" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl3" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl3" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl4" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl4" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -66,12 +66,12 @@
                         </Pane>
                         <Pane fx:id="pane3" layoutX="190.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl5" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl5" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl6" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl6" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -80,12 +80,12 @@
                         </Pane>
                         <Pane fx:id="pane4" layoutX="370.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl7" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl7" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl8" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl8" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -101,12 +101,12 @@
                      <children>
                         <Pane fx:id="pane5" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl9" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl9" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl10" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl10" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -115,12 +115,12 @@
                         </Pane>
                         <Pane fx:id="pane6" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl11" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl11" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl12" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl12" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -129,12 +129,12 @@
                         </Pane>
                         <Pane fx:id="pane7" layoutX="190.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl13" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl13" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl14" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl14" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -143,12 +143,12 @@
                         </Pane>
                         <Pane fx:id="pane8" layoutX="370.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl15" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl15" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl16" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl16" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -164,12 +164,12 @@
                      <children>
                         <Pane fx:id="pane9" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl17" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl17" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl18" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl18" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -178,12 +178,12 @@
                         </Pane>
                         <Pane fx:id="pane10" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl19" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl19" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl20" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl20" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -192,12 +192,12 @@
                         </Pane>
                         <Pane fx:id="pane11" layoutX="190.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl21" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl21" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl22" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl22" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
@@ -206,12 +206,12 @@
                         </Pane>
                         <Pane fx:id="pane12" layoutX="370.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0">
                            <children>
-                              <Label fx:id="lbl23" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl23" alignment="CENTER" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl24" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl24" alignment="CENTER" layoutX="90.0" prefHeight="50.0" prefWidth="90.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="28.0" />
                                  </font>

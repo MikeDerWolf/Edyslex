@@ -32,7 +32,7 @@
             </Button>
             <Pane layoutX="50.0" layoutY="50.0" prefHeight="650.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../../css/style.css">
                <children>
-                  <Label layoutX="20.0" layoutY="10.0" text="Potrivește cuvântul la imaginea corespunzătoare!" textFill="#005f99">
+                  <Label layoutX="20.0" layoutY="10.0" text="Potrivește cuvântul la imaginea corespunzătoare!">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>

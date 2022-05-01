@@ -29,7 +29,7 @@
             </Button>
             <Pane layoutX="50.0" layoutY="50.0" prefHeight="650.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../../css/style.css">
                <children>
-                  <Label layoutX="20.0" layoutY="10.0" text="Citește propozițiile! Caută propozițiile care se potrivesc!" textFill="#005f99">
+                  <Label layoutX="20.0" layoutY="10.0" text="Citește propozițiile! Caută propozițiile care se potrivesc!">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
@@ -43,7 +43,7 @@
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl1" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl1" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
@@ -57,7 +57,7 @@
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl2" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl2" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
@@ -69,11 +69,6 @@
                         <Insets left="125.0" right="125.0" />
                      </padding>
                   </HBox>
-                  <Label fx:id="ansLbl1" alignment="CENTER" layoutX="200.0" layoutY="450.0" prefHeight="40.0" prefWidth="340.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
-                     <font>
-                        <Font name="Cambria Bold" size="18.0" />
-                     </font>
-                  </Label>
                   <HBox layoutY="140.0" prefHeight="90.0" prefWidth="1100.0" spacing="50.0">
                      <children>
                         <Pane prefHeight="90.0" prefWidth="400.0">
@@ -83,7 +78,7 @@
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl3" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl3" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
@@ -97,7 +92,7 @@
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl4" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl4" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
@@ -118,7 +113,7 @@
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl5" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl5" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
@@ -132,7 +127,7 @@
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl6" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl6" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
@@ -153,7 +148,7 @@
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl7" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl7" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
@@ -167,7 +162,7 @@
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lbl8" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                              <Label fx:id="lbl8" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #73491a;" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                                  <font>
                                     <Font name="Cambria Bold" size="18.0" />
                                  </font>
@@ -179,6 +174,11 @@
                         <Insets left="125.0" right="125.0" />
                      </padding>
                   </HBox>
+                  <Label fx:id="ansLbl1" alignment="CENTER" layoutX="200.0" layoutY="450.0" prefHeight="40.0" prefWidth="340.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
                   <Label fx:id="ansLbl2" alignment="CENTER" layoutX="560.0" layoutY="450.0" prefHeight="40.0" prefWidth="340.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
