@@ -1,12 +1,9 @@
 package org.edyslex.controllers.exercises.exercise13;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseDragEvent;
-import javafx.scene.input.MouseEvent;
 import org.edyslex.controllers.exercises.ExerciseBaseController;
 
 import java.io.IOException;
@@ -81,70 +78,13 @@ public class Exercise13_1Controller extends ExerciseBaseController implements In
 
         int i = 0;
         for(Label lbl: answerLabels) {
-
             lbl.setText(tags.get(i));
             i++;
-
-            lbl.setOnMousePressed(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
-                    currentLabel = lbl;
-                    lbl.setMouseTransparent(true);
-                    labelOffsetX = lbl.getLayoutX() - event.getSceneX();
-                    labelOffsetY = lbl.getLayoutY() - event.getSceneY();
-                    event.setDragDetect(true);
-                    labelContent = lbl.getText();
-                    initialX = lbl.getLayoutX();
-                    initialY = lbl.getLayoutY();
-                }
-            });
-
-            lbl.setOnMouseReleased(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
-                    lbl.setMouseTransparent(false);
-                    lbl.setLayoutX(initialX);
-                    lbl.setLayoutY(initialY);
-                }
-            });
-
-            lbl.setOnMouseDragged(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
-                    lbl.setLayoutX(event.getSceneX() + labelOffsetX);
-                    lbl.setLayoutY(event.getSceneY() + labelOffsetY);
-                    event.setDragDetect(false);
-                }
-            });
-
-            lbl.setOnDragDetected(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
-                    lbl.startFullDrag();
-                }
-            });
+            dragEventsSingleAnswer(lbl);
         }
 
         for(Label lbl: labels) {
-
-            lbl.setOnMouseDragReleased(new EventHandler<MouseDragEvent>() {
-                public void handle(MouseDragEvent event) {
-                    if(labelContent.equals(labelsMap.get(lbl))){
-                        lbl.setText(labelContent);
-                        lbl.setDisable(true);
-                        lbl.setOpacity(1);
-                        currentLabel.setVisible(false);
-                        displayFeedback(rightAlert);
-                    } else{
-                        currentLabel.setMouseTransparent(false);
-                        currentLabel.setLayoutX(initialX);
-                        currentLabel.setLayoutY(initialY);
-                        displayFeedback(wrongAlert);
-                    }
-
-                }
-            });
-
-            lbl.setOnMouseDragExited(new EventHandler<MouseDragEvent>() {
-                public void handle(MouseDragEvent event) {
-                }
-            });
+            dragEventsSingleSlot(lbl, labelsMap);
         }
 
     }

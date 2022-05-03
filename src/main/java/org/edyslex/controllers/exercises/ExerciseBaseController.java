@@ -1,15 +1,21 @@
 package org.edyslex.controllers.exercises;
 
 import javafx.animation.PauseTransition;
+import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseDragEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import org.edyslex.controllers.students.BaseController;
+
+import java.util.*;
 
 public class ExerciseBaseController extends BaseController {
 
@@ -84,5 +90,86 @@ public class ExerciseBaseController extends BaseController {
             imageView.setY((imageView.getFitHeight() - h) / 2);
 
         }
+    }
+
+    public void dragEventsSingleAnswer(Label lbl){
+        lbl.addEventFilter(MouseEvent.ANY, ev -> {
+            if (ev.getButton() == MouseButton.SECONDARY) {
+                ev.consume();
+            }
+        });
+
+        lbl.setOnMousePressed(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                currentLabel = lbl;
+                lbl.setMouseTransparent(true);
+                labelOffsetX = lbl.getLayoutX() - event.getSceneX();
+                labelOffsetY = lbl.getLayoutY() - event.getSceneY();
+                event.setDragDetect(true);
+                labelContent = lbl.getText();
+                initialX = lbl.getLayoutX();
+                initialY = lbl.getLayoutY();
+            }
+        });
+
+        lbl.setOnMouseReleased(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                lbl.setMouseTransparent(false);
+                lbl.setLayoutX(initialX);
+                lbl.setLayoutY(initialY);
+            }
+        });
+
+        lbl.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                lbl.setLayoutX(event.getSceneX() + labelOffsetX);
+                lbl.setLayoutY(event.getSceneY() + labelOffsetY);
+                event.setDragDetect(false);
+            }
+        });
+
+        lbl.setOnDragDetected(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                lbl.startFullDrag();
+            }
+        });
+    }
+
+    public void dragEventsSingleSlot(Label lbl, HashMap<Label, ?> mapper){
+        lbl.addEventFilter(MouseEvent.ANY, ev -> {
+            if (ev.getButton() == MouseButton.SECONDARY) {
+                ev.consume();
+            }
+        });
+
+        lbl.setOnMouseDragReleased(new EventHandler<MouseDragEvent>() {
+            public void handle(MouseDragEvent event) {
+                Boolean condition = null;
+                var value = mapper.get(lbl);
+                if(value instanceof List<?>){
+                    condition = ((List<?>) value).contains(labelContent);
+                } else {
+                    condition = value.equals(labelContent);
+                }
+                if(condition){
+                    lbl.setText(labelContent);
+                    lbl.setDisable(true);
+                    lbl.setOpacity(1);
+                    currentLabel.setVisible(false);
+                    displayFeedback(rightAlert);
+                } else{
+                    currentLabel.setMouseTransparent(false);
+                    currentLabel.setLayoutX(initialX);
+                    currentLabel.setLayoutY(initialY);
+                    displayFeedback(wrongAlert);
+                }
+
+            }
+        });
+
+        lbl.setOnMouseDragExited(new EventHandler<MouseDragEvent>() {
+            public void handle(MouseDragEvent event) {
+            }
+        });
     }
 }
