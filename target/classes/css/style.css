@@ -3,6 +3,7 @@
     -fx-border-width: 0;
     -fx-background-color: transparent;
 	-fx-background-insets: 0;
+	-fx-text-fill: #005F99;
 }
 
 .windowControlButtons:hover{
@@ -30,6 +31,28 @@
 
 .generalButton:pressed{
     -fx-background-color: #EEE292;
+}
+
+
+.utilityButtons{
+	-fx-border-color: #005F99;
+    -fx-border-width: 1;
+    -fx-background-color: rgb(255, 255, 255, 0.2);
+    -fx-background-insets: 0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+	-fx-text-fill: #005F99;
+	-fx-font-family: Cambria;
+	-fx-font-size: 22;
+	-fx-font-weight: bold;
+}
+
+.utilityButtons:hover{
+	-fx-background-color: rgb(255, 255, 255, 0.4);
+}
+
+.utilityButtons:pressed{
+	-fx-background-color: rgb(255, 255, 255, 0.6);
 }
 
 
@@ -194,7 +217,7 @@
 	-fx-border-width: 1;
 	-fx-border-color: #005f99;
 	-fx-background-insets: 0;
-	-fx-background-color: #fff5b7;
+	-fx-background-color: #ffffff;
 	-fx-text-fill: #005f99;
 	-fx-border-radius: 10 0 0 10;
 	-fx-background-radius: 10 0 0 10;
@@ -202,7 +225,7 @@
 }
 
 .date-picker > .arrow-button {
-    -fx-background-color: #fff5b7;
+    -fx-background-color: #ffffff;
     -fx-background-insets: 0;
 	-fx-border-width: 1 1 1 0;
 	-fx-border-color: #005f99;
@@ -212,7 +235,7 @@
 }
 
 .date-picker > .arrow-button:pressed {
-    -fx-background-color: #EEE292;
+    -fx-background-color: #EDEDED;
 }
 
 .addStudentTextField {
@@ -221,7 +244,7 @@
 	-fx-border-color: #005f99;
 	-fx-background-radius: 10;
 	-fx-background-insets: 0;
-	-fx-background-color: #fff5b7;
+	-fx-background-color: #ffffff;
 	-fx-text-fill: #005f99;
 }
 
@@ -235,13 +258,13 @@
 }
 
 .generalTextArea .scroll-pane{
-	-fx-background-color: #fff5b7;
+	-fx-background-color: #ffffff;
 	-fx-border-width: 1;
 	-fx-border-color: #005f99;
 }
 
 .generalTextArea .content{
-	-fx-background-color: #fff5b7;
+	-fx-background-color: #ffffff;
 }
 
 .generalTextArea .scroll-bar{
@@ -265,7 +288,7 @@
 	-fx-border-color: #005f99;
 	-fx-background-radius: 10;
 	-fx-background-insets: 0;
-	-fx-background-color: #fff5b7;
+	-fx-background-color: #ffffff;
 	-fx-text-fill: #005f99;
 	-fx-font-family: Cambria;
 	-fx-font-size: 16; 
@@ -273,11 +296,11 @@
 
 .combo-box .list-view{
 	-fx-background-insets: 0;
-	-fx-background-color: #fff5b7;
+	-fx-background-color: #ffffff;
 }
 
 .combo-box .list-view .list-cell{
-	-fx-background-color: #fff5b7;
+	-fx-background-color: #ffffff;
 	-fx-text-fill: #005f99;
 	-fx-font-family: Cambria;
 	-fx-font-size: 16;
@@ -290,11 +313,11 @@
 }
 
 .combo-box .list-view .list-cell:hover{
-	-fx-background-color: #EEE292;
+	-fx-background-color: #EDEDED;
 }
 
 .combo-box .scroll-bar{
-	-fx-background-color: #EEE292;
+	-fx-background-color: #ffffff;
 }
 
 .combo-box .scroll-bar .increment-button ,
@@ -313,6 +336,20 @@
 	-fx-border-width: 1;
 	-fx-border-radius: 10;
 	-fx-border-color: #005f99;
+}
+
+.exercisesPane {
+	-fx-background-radius: 0 10 10 0;
+	-fx-border-radius: 0 10 10 0;
+	-fx-background-color: rgb(207, 207, 207, 0.4);
+}
+
+.viewPaneStudents {
+	-fx-background-radius: 10;
+	-fx-border-width: 1;
+	-fx-border-radius: 10;
+	-fx-border-color: #005f99;
+	-fx-background-color: rgb(255, 255, 255, 0.75);
 }
 
 .viewTextArea {
@@ -350,19 +387,35 @@
 	-fx-background-color: #005f99;
 }
 
-.exercisesMenuButton{
+.exercisesMenuButton, .exercisesMenuButtonFirst, .exercisesMenuButtonLast{
 	-fx-border-color: transparent;
     -fx-border-width: 0;
-    -fx-background-color: transparent;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: rgb(255, 255, 255, 0.4);
 	-fx-background-insets: 0;
+	-fx-text-fill: #005f99;
+    -fx-font-family: Cambria;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
 }
 
-.exercisesMenuButton:hover{
+.exercisesMenuButton:hover, .exercisesMenuButtonFirst:hover, .exercisesMenuButtonLast:hover{
     -fx-background-color: rgb(194,193,225, 0.8);
 }
 
-.exercisesMenuButton:pressed{
+.exercisesMenuButton:pressed, .exercisesMenuButtonFirst:pressed, .exercisesMenuButtonLast:pressed{
     -fx-background-color: #EEE292;
+}
+
+.exercisesMenuButtonFirst{
+	-fx-border-radius: 10 0 0 0;
+    -fx-background-radius: 10 0 0 0;
+}
+
+.exercisesMenuButtonLast{
+	-fx-border-radius: 0 0 0 10;
+    -fx-background-radius: 0 0 0 10;
 }
 
 .imageViewLabel{

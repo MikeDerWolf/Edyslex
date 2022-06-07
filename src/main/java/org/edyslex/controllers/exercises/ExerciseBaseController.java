@@ -2,6 +2,7 @@ package org.edyslex.controllers.exercises;
 
 import javafx.animation.PauseTransition;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
@@ -11,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import org.edyslex.controllers.students.BaseController;
@@ -102,13 +104,14 @@ public class ExerciseBaseController extends BaseController {
         lbl.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 currentLabel = lbl;
+                lbl.toFront();
                 lbl.setMouseTransparent(true);
-                labelOffsetX = lbl.getLayoutX() - event.getSceneX();
-                labelOffsetY = lbl.getLayoutY() - event.getSceneY();
-                event.setDragDetect(true);
-                labelContent = lbl.getText();
                 initialX = lbl.getLayoutX();
                 initialY = lbl.getLayoutY();
+                labelOffsetX = initialX - event.getSceneX();
+                labelOffsetY = initialY - event.getSceneY();
+                event.setDragDetect(true);
+                labelContent = lbl.getText();
             }
         });
 
@@ -171,5 +174,16 @@ public class ExerciseBaseController extends BaseController {
             public void handle(MouseDragEvent event) {
             }
         });
+    }
+
+    public int noOfCompletedChildren(Pane pane){
+        int no = 0;
+        for(Node child: pane.getChildren()){
+            Label label = (Label) child;
+            if(!label.getText().isEmpty()){
+                no++;
+            }
+        }
+        return no;
     }
 }

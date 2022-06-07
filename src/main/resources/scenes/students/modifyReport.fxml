@@ -17,58 +17,63 @@
                   <Font name="Cambria Bold" size="22.0" />
                </font>
             </Label>
-            <Button fx:id="backButton" layoutX="1000.0" layoutY="710.0" mnemonicParsing="false" onAction="#switchToReports" prefHeight="40.0" prefWidth="150.0" styleClass="generalButton" stylesheets="@../../css/style.css" text="Înapoi" textFill="#005f99">
-               <font>
-                  <Font name="Cambria Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="addButton" ellipsisString="" layoutX="460.0" layoutY="660.0" mnemonicParsing="false" onAction="#modifyReport" prefHeight="50.0" prefWidth="300.0" styleClass="generalButton" stylesheets="@../../css/style.css" text="MODIFICARE" textFill="#005f99">
+            <Button fx:id="addButton" ellipsisString="" layoutX="900.0" layoutY="42.0" mnemonicParsing="false" onAction="#modifyReport" prefHeight="43.0" prefWidth="200.0" styleClass="utilityButtons" stylesheets="@../../css/style.css" text="🖉  MODIFICARE" textFill="#005f99">
                <font>
                   <Font name="Cambria Bold" size="20.0" />
                </font>
             </Button>
-            <Label layoutX="100.0" layoutY="100.0" text="Data" textFill="#005f99">
+            <Label layoutX="100.0" layoutY="102.0" text="Data" textFill="#005f99">
                <font>
-                  <Font name="Cambria Bold" size="18.0" />
+                  <Font name="Cambria Bold" size="17.0" />
                </font>
             </Label>
             <DatePicker fx:id="dateOfReportDatePicker" layoutX="178.0" layoutY="96.0" prefHeight="30.0" prefWidth="285.0" promptText="ZZ/LL/AAAA" styleClass="date-picker" stylesheets="@../../css/style.css" />
-            <TextArea fx:id="prioritiesTextArea" layoutX="100.0" layoutY="165.0" prefHeight="90.0" prefWidth="1000.0" promptText="..." styleClass="generalTextArea" stylesheets="@../../css/style.css" wrapText="true" />
+            <TextArea fx:id="prioritiesTextArea" layoutX="100.0" layoutY="165.0" prefHeight="120.0" prefWidth="1000.0" promptText="..." styleClass="generalTextArea" stylesheets="@../../css/style.css" wrapText="true" />
             <Label layoutX="100.0" layoutY="140.0" text="Priorități" textFill="#005f99">
                <font>
-                  <Font name="Cambria Bold" size="18.0" />
+                  <Font name="Cambria Bold" size="17.0" />
                </font>
             </Label>
-            <TextArea fx:id="difficultiesTextArea" layoutX="100.0" layoutY="290.0" prefHeight="90.0" prefWidth="1000.0" promptText="..." styleClass="generalTextArea" stylesheets="@../../css/style.css" wrapText="true" />
-            <Label layoutX="100.0" layoutY="265.0" text="Dificultăți întâmpinate" textFill="#005f99">
+            <TextArea fx:id="difficultiesTextArea" layoutX="100.0" layoutY="320.0" prefHeight="120.0" prefWidth="1000.0" promptText="..." styleClass="generalTextArea" stylesheets="@../../css/style.css" wrapText="true" />
+            <Label layoutX="100.0" layoutY="295.0" text="Dificultăți întâmpinate" textFill="#005f99">
                <font>
-                  <Font name="Cambria Bold" size="18.0" />
+                  <Font name="Cambria Bold" size="17.0" />
                </font>
             </Label>
-            <TextArea fx:id="progressTextArea" layoutX="100.0" layoutY="415.0" prefHeight="90.0" prefWidth="1000.0" promptText="..." styleClass="generalTextArea" stylesheets="@../../css/style.css" wrapText="true" />
-            <Label layoutX="100.0" layoutY="390.0" text="Progrese" textFill="#005f99">
+            <TextArea fx:id="progressTextArea" layoutX="100.0" layoutY="475.0" prefHeight="120.0" prefWidth="1000.0" promptText="..." styleClass="generalTextArea" stylesheets="@../../css/style.css" wrapText="true" />
+            <Label layoutX="100.0" layoutY="450.0" text="Progrese" textFill="#005f99">
                <font>
-                  <Font name="Cambria Bold" size="18.0" />
+                  <Font name="Cambria Bold" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="100.0" layoutY="515.0" text="Observații" textFill="#005f99">
+            <TextArea fx:id="observationsTextArea" layoutX="100.0" layoutY="630.0" prefHeight="120.0" prefWidth="1000.0" promptText="..." styleClass="generalTextArea" stylesheets="@../../css/style.css" wrapText="true" />
+            <Label layoutX="100.0" layoutY="605.0" text="Observații" textFill="#005f99">
                <font>
-                  <Font name="Cambria Bold" size="18.0" />
+                  <Font name="Cambria Bold" size="17.0" />
                </font>
             </Label>
-            <TextArea fx:id="observationsTextArea" layoutX="100.0" layoutY="540.0" prefHeight="90.0" prefWidth="1000.0" promptText="..." styleClass="generalTextArea" stylesheets="@../../css/style.css" wrapText="true" />
          </children>
       </Pane>
-      <Pane fx:id="stageBar" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0">
+      <Pane fx:id="stageBar1" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0" stylesheets="@../../css/style.css">
          <children>
-            <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="X" textFill="#005f99">
+            <Button fx:id="closeButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="X" textFill="#005f99">
                <font>
                   <Font name="Rockwell Extra Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="minimizeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="—" textFill="#005f99">
+            <Button fx:id="minimizeButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="—" textFill="#005f99">
                <font>
                   <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton1" layoutX="3.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToReports" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="🢀" textFill="#005f99">
+               <font>
+                  <Font name="Cambria Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton11" layoutX="46.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="🏠" textFill="#005f99">
+               <font>
+                  <Font name="Cambria Bold" size="16.0" />
                </font>
             </Button>
          </children>

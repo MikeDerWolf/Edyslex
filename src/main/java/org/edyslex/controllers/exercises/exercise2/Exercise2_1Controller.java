@@ -4,11 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseDragEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import org.edyslex.controllers.exercises.ExerciseBaseController;
 
@@ -68,44 +66,9 @@ public class Exercise2_1Controller extends ExerciseBaseController implements Ini
 
         int i = 0;
         for(Label lbl: answerLabels) {
-
             lbl.setText(tags.get(i));
             i++;
-
-            lbl.setOnMousePressed(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
-                    currentLabel = lbl;
-                    lbl.setMouseTransparent(true);
-                    labelOffsetX = lbl.getLayoutX() - event.getSceneX();
-                    labelOffsetY = lbl.getLayoutY() - event.getSceneY();
-                    event.setDragDetect(true);
-                    labelContent = lbl.getText();
-                    initialX = lbl.getLayoutX();
-                    initialY = lbl.getLayoutY();
-                }
-            });
-
-            lbl.setOnMouseReleased(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
-                    lbl.setMouseTransparent(false);
-                    lbl.setLayoutX(initialX);
-                    lbl.setLayoutY(initialY);
-                }
-            });
-
-            lbl.setOnMouseDragged(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
-                    lbl.setLayoutX(event.getSceneX() + labelOffsetX);
-                    lbl.setLayoutY(event.getSceneY() + labelOffsetY);
-                    event.setDragDetect(false);
-                }
-            });
-
-            lbl.setOnDragDetected(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
-                    lbl.startFullDrag();
-                }
-            });
+            dragEventsSingleAnswer(lbl);
         }
 
         for(i=0; i<labels.size(); i++) {
@@ -115,8 +78,8 @@ public class Exercise2_1Controller extends ExerciseBaseController implements Ini
                 public void handle(MouseDragEvent event) {
                     Parent pane = labels.get(finalI).getParent();
 
-                    if((finalI % 2 == 0 && inLeftSide(currentLabel)) ||
-                            (finalI % 2 == 1 && inRightSide(currentLabel))){
+                    if((finalI % 2 == 0 && leftSideTags.contains(currentLabel.getText())) ||
+                            (finalI % 2 == 1 && rightSideTags.contains(currentLabel.getText()))){
                         labels.get(finalI).setText(labelContent);
                         labels.get(finalI).setDisable(true);
                         labels.get(finalI).setOpacity(1);
@@ -158,31 +121,11 @@ public class Exercise2_1Controller extends ExerciseBaseController implements Ini
                 }
             });
 
-
         }
 
     }
 
-    public boolean inLeftSide(Label lbl){
-        return leftSideTags.contains(lbl.getText());
-    }
-
-    public boolean inRightSide(Label lbl){
-        return rightSideTags.contains(lbl.getText());
-    }
-
-    public int noOfCompletedChildren(Pane pane){
-        int no = 0;
-        for(Node child: pane.getChildren()){
-            Label label = (Label) child;
-            if(!label.getText().isEmpty()){
-                no++;
-            }
-        }
-        return no;
-    }
-
-    public void switchToExercise2(ActionEvent event) throws IOException {
+    public void back(ActionEvent event) throws IOException {
         switchScene(event, "scenes/exercises/exercise2/exercise2_menu.fxml");
     }
 

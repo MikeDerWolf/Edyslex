@@ -12,29 +12,48 @@
    <children>
       <Pane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to left bottom, #fff5b7, #ddf4ad, #b2f2af, #7cefbc, #00ead3);;" stylesheets="@../../../css/style.css">
          <children>
-            <Button fx:id="backButton" layoutX="1000.0" layoutY="710.0" mnemonicParsing="false" onAction="#switchToExercise12" prefHeight="40.0" prefWidth="150.0" styleClass="generalButton" stylesheets="@../../../css/style.css" text="Înapoi" textFill="#005f99">
-               <font>
-                  <Font name="Cambria Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="backButton11" layoutX="525.0" layoutY="710.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="40.0" prefWidth="150.0" styleClass="generalButton" stylesheets="@../../../css/style.css" text="Meniu" textFill="#005f99">
-               <font>
-                  <Font name="Cambria Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="backButton1" layoutX="50.0" layoutY="710.0" mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="150.0" styleClass="generalButton" stylesheets="@../../../css/style.css" text="Resetare" textFill="#005f99">
-               <font>
-                  <Font name="Cambria Bold" size="18.0" />
-               </font>
-            </Button>
-            <Pane layoutX="50.0" layoutY="50.0" prefHeight="650.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../../css/style.css">
+            <Pane fx:id="stageBar" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0" stylesheets="@../../../css/style.css">
                <children>
-                  <Label layoutX="20.0" layoutY="10.0" text="Potrivește cuvintele!">
+                  <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="X" textFill="#005f99">
+                     <font>
+                        <Font name="Rockwell Extra Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="minimizeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="—" textFill="#005f99">
+                     <font>
+                        <Font name="Cooper Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton" layoutX="3.0" layoutY="3.0" mnemonicParsing="false" onAction="#back" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🢀" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton11" layoutX="46.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🏠" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="50.0" layoutY="50.0" prefHeight="700.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../../css/style.css">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Potrivește cuvintele!">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
                   </Label>
-                  <HBox layoutY="50.0" prefHeight="50.0" prefWidth="1100.0" spacing="40.0">
+                  <Button fx:id="backButton12" layoutX="1000.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔊" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton1" layoutX="1045.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔄" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <HBox layoutY="60.0" prefHeight="50.0" prefWidth="1100.0" spacing="40.0">
                      <children>
                         <Pane prefHeight="50.0" prefWidth="300.0">
                            <children>
@@ -83,7 +102,7 @@
                         <Insets left="60.0" right="60.0" />
                      </padding>
                   </HBox>
-                  <HBox layoutY="290.0" prefHeight="50.0" prefWidth="1100.0" spacing="80.0">
+                  <HBox layoutY="300.0" prefHeight="50.0" prefWidth="1100.0" spacing="80.0">
                      <children>
                         <Pane prefHeight="50.0" prefWidth="300.0">
                            <children>
@@ -118,7 +137,7 @@
                         <Insets left="210.0" right="210.0" />
                      </padding>
                   </HBox>
-                  <HBox layoutY="110.0" prefHeight="50.0" prefWidth="1100.0" spacing="40.0">
+                  <HBox layoutY="120.0" prefHeight="50.0" prefWidth="1100.0" spacing="40.0">
                      <children>
                         <Pane prefHeight="50.0" prefWidth="300.0">
                            <children>
@@ -167,7 +186,7 @@
                         <Insets left="60.0" right="60.0" />
                      </padding>
                   </HBox>
-                  <HBox layoutY="170.0" prefHeight="50.0" prefWidth="1100.0" spacing="40.0">
+                  <HBox layoutY="180.0" prefHeight="50.0" prefWidth="1100.0" spacing="40.0">
                      <children>
                         <Pane prefHeight="50.0" prefWidth="300.0">
                            <children>
@@ -216,7 +235,7 @@
                         <Insets left="60.0" right="60.0" />
                      </padding>
                   </HBox>
-                  <HBox layoutY="230.0" prefHeight="50.0" prefWidth="1100.0" spacing="40.0">
+                  <HBox layoutY="240.0" prefHeight="50.0" prefWidth="1100.0" spacing="40.0">
                      <children>
                         <Pane prefHeight="50.0" prefWidth="300.0">
                            <children>
@@ -265,7 +284,7 @@
                         <Insets left="60.0" right="60.0" />
                      </padding>
                   </HBox>
-                  <HBox layoutY="350.0" prefHeight="50.0" prefWidth="1100.0" spacing="80.0">
+                  <HBox layoutY="360.0" prefHeight="50.0" prefWidth="1100.0" spacing="80.0">
                      <children>
                         <Pane prefHeight="50.0" prefWidth="300.0">
                            <children>
@@ -300,82 +319,82 @@
                         <Insets left="210.0" right="210.0" />
                      </padding>
                   </HBox>
-                  <Label fx:id="ansLbl1" alignment="CENTER" layoutX="220.0" layoutY="440.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl1" alignment="CENTER" layoutX="205.0" layoutY="455.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl2" alignment="CENTER" layoutX="390.0" layoutY="440.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl2" alignment="CENTER" layoutX="385.0" layoutY="455.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl3" alignment="CENTER" layoutX="560.0" layoutY="440.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl3" alignment="CENTER" layoutX="565.0" layoutY="455.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl4" alignment="CENTER" layoutX="730.0" layoutY="440.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl4" alignment="CENTER" layoutX="745.0" layoutY="455.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl5" alignment="CENTER" layoutX="220.0" layoutY="490.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl5" alignment="CENTER" layoutX="205.0" layoutY="520.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl6" alignment="CENTER" layoutX="390.0" layoutY="490.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl6" alignment="CENTER" layoutX="385.0" layoutY="520.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl7" alignment="CENTER" layoutX="560.0" layoutY="490.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl7" alignment="CENTER" layoutX="565.0" layoutY="520.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl8" alignment="CENTER" layoutX="730.0" layoutY="490.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl8" alignment="CENTER" layoutX="745.0" layoutY="520.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl9" alignment="CENTER" layoutX="220.0" layoutY="540.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl9" alignment="CENTER" layoutX="205.0" layoutY="580.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl10" alignment="CENTER" layoutX="390.0" layoutY="540.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl10" alignment="CENTER" layoutX="385.0" layoutY="580.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl11" alignment="CENTER" layoutX="560.0" layoutY="540.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl11" alignment="CENTER" layoutX="565.0" layoutY="580.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl12" alignment="CENTER" layoutX="730.0" layoutY="540.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl12" alignment="CENTER" layoutX="745.0" layoutY="580.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl13" alignment="CENTER" layoutX="220.0" layoutY="590.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl13" alignment="CENTER" layoutX="205.0" layoutY="640.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl14" alignment="CENTER" layoutX="390.0" layoutY="590.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl14" alignment="CENTER" layoutX="385.0" layoutY="640.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl15" alignment="CENTER" layoutX="560.0" layoutY="590.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl15" alignment="CENTER" layoutX="565.0" layoutY="640.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ansLbl16" alignment="CENTER" layoutX="730.0" layoutY="590.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                  <Label fx:id="ansLbl16" alignment="CENTER" layoutX="745.0" layoutY="640.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="22.0" />
                      </font>
@@ -383,19 +402,5 @@
                </children>
             </Pane>
          </children></Pane>
-      <Pane fx:id="stageBar" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0" stylesheets="@../../../css/style.css">
-         <children>
-            <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="X" textFill="#005f99">
-               <font>
-                  <Font name="Rockwell Extra Bold" size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="minimizeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="—" textFill="#005f99">
-               <font>
-                  <Font name="Cooper Black" size="12.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
    </children>
 </AnchorPane>

@@ -105,7 +105,7 @@ public class Exercise3_1Controller extends ExerciseBaseController implements Ini
 
     }
 
-    public void switchToExercise3(ActionEvent event) throws IOException {
+    public void back(ActionEvent event) throws IOException {
         switchScene(event, "scenes/exercises/exercise3/exercise3_menu.fxml");
     }
 

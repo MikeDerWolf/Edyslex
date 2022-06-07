@@ -12,12 +12,12 @@
    <children>
       <Pane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to left bottom, #fff5b7, #ddf4ad, #b2f2af, #7cefbc, #00ead3);;">
          <children>
-            <Label layoutX="50.0" layoutY="80.0" text="RAPOARTE ELEV" textFill="#005f99">
+            <Label layoutX="100.0" layoutY="80.0" text="RAPOARTE ELEV" textFill="#005f99">
                <font>
                   <Font name="Cambria Bold" size="22.0" />
                </font>
             </Label>
-            <TableView fx:id="reportTableView" fixedCellSize="0.0" focusTraversable="false" layoutX="50.0" layoutY="150.0" prefHeight="600.0" prefWidth="550.0" styleClass="studentTableView" stylesheets="@../../css/style.css">
+            <TableView fx:id="reportTableView" fixedCellSize="0.0" focusTraversable="false" layoutX="100.0" layoutY="150.0" prefHeight="600.0" prefWidth="550.0" styleClass="studentTableView" stylesheets="@../../css/style.css">
               <columns>
                 <TableColumn fx:id="reportNoColumn" editable="false" minWidth="8.00006103515625" prefWidth="350.0" resizable="false" sortable="false" text="Raport" />
                 <TableColumn fx:id="reportDateColumn" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Data" />
@@ -26,42 +26,47 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Button fx:id="backButton" layoutX="1000.0" layoutY="710.0" mnemonicParsing="false" onAction="#switchToStudents" prefHeight="40.0" prefWidth="150.0" styleClass="generalButton" stylesheets="@../../css/style.css" text="Înapoi" textFill="#005f99">
-               <font>
-                  <Font name="Cambria Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="addButton" ellipsisString="" layoutX="750.0" layoutY="250.0" mnemonicParsing="false" onAction="#switchToAddReport" prefHeight="50.0" prefWidth="300.0" styleClass="generalButton" stylesheets="@../../css/style.css" text="ADĂUGARE" textFill="#005f99">
+            <Button fx:id="addButton" ellipsisString="" layoutX="800.0" layoutY="375.0" mnemonicParsing="false" onAction="#switchToAddReport" prefHeight="50.0" prefWidth="250.0" styleClass="utilityButtons" stylesheets="@../../css/style.css" text="➕  ADĂUGARE" textFill="#005f99">
                <font>
                   <Font name="Cambria Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="viewButton" layoutX="750.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToViewReport" prefHeight="50.0" prefWidth="300.0" styleClass="generalButton" stylesheets="@../../css/style.css" text="VIZUALIZARE" textFill="#005f99">
+            <Button fx:id="viewButton" layoutX="800.0" layoutY="275.0" mnemonicParsing="false" onAction="#switchToViewReport" prefHeight="50.0" prefWidth="250.0" styleClass="utilityButtons" stylesheets="@../../css/style.css" text="👁  VIZUALIZARE" textFill="#005f99">
                <font>
                   <Font name="Cambria Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="modifyButton" layoutX="750.0" layoutY="450.0" mnemonicParsing="false" onAction="#switchToModifyReport" prefHeight="50.0" prefWidth="300.0" styleClass="generalButton" stylesheets="@../../css/style.css" text="MODIFICARE" textFill="#005f99">
+            <Button fx:id="modifyButton" layoutX="800.0" layoutY="475.0" mnemonicParsing="false" onAction="#switchToModifyReport" prefHeight="50.0" prefWidth="250.0" styleClass="utilityButtons" stylesheets="@../../css/style.css" text="🖉  MODIFICARE" textFill="#005f99">
                <font>
                   <Font name="Cambria Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="deleteButton" layoutX="750.0" layoutY="550.0" mnemonicParsing="false" onAction="#deleteReport" prefHeight="50.0" prefWidth="300.0" styleClass="generalButton" stylesheets="@../../css/style.css" text="ȘTERGERE" textFill="#005f99">
+            <Button fx:id="deleteButton" layoutX="800.0" layoutY="575.0" mnemonicParsing="false" onAction="#deleteReport" prefHeight="50.0" prefWidth="250.0" styleClass="utilityButtons" stylesheets="@../../css/style.css" text="✖  ȘTERGERE" textFill="#005f99">
                <font>
                   <Font name="Cambria Bold" size="20.0" />
                </font>
             </Button>
          </children></Pane>
-      <Pane fx:id="stageBar" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0">
+      <Pane fx:id="stageBar1" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0" stylesheets="@../../css/style.css">
          <children>
-            <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="X" textFill="#005f99">
+            <Button fx:id="closeButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="X" textFill="#005f99">
                <font>
                   <Font name="Rockwell Extra Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="minimizeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="—" textFill="#005f99">
+            <Button fx:id="minimizeButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="—" textFill="#005f99">
                <font>
                   <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton1" layoutX="3.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToStudents" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="🢀" textFill="#005f99">
+               <font>
+                  <Font name="Cambria Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton11" layoutX="46.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../css/style.css" text="🏠" textFill="#005f99">
+               <font>
+                  <Font name="Cambria Bold" size="16.0" />
                </font>
             </Button>
          </children>
