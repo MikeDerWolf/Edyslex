@@ -341,7 +341,7 @@
 .exercisesPane {
 	-fx-background-radius: 0 10 10 0;
 	-fx-border-radius: 0 10 10 0;
-	-fx-background-color: rgb(207, 207, 207, 0.4);
+	-fx-background-color: #AAF2B1;
 }
 
 .viewPaneStudents {
@@ -398,14 +398,15 @@
     -fx-font-family: Cambria;
     -fx-font-size: 18;
     -fx-font-weight: bold;
+    -fx-alignment: center-left;
 }
 
 .exercisesMenuButton:hover, .exercisesMenuButtonFirst:hover, .exercisesMenuButtonLast:hover{
-    -fx-background-color: rgb(194,193,225, 0.8);
+    -fx-background-color: #AAF2B1;
 }
 
 .exercisesMenuButton:pressed, .exercisesMenuButtonFirst:pressed, .exercisesMenuButtonLast:pressed{
-    -fx-background-color: #EEE292;
+    -fx-background-color: rgb(0, 95, 153, 0.3);
 }
 
 .exercisesMenuButtonFirst{
@@ -416,6 +417,28 @@
 .exercisesMenuButtonLast{
 	-fx-border-radius: 0 0 0 10;
     -fx-background-radius: 0 0 0 10;
+}
+
+.exercisesSubmenuButton{
+	-fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+	-fx-background-insets: 0;
+	-fx-text-fill: #005f99;
+    -fx-font-family: Cambria;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.exercisesSubmenuButton:hover{
+    -fx-background-color: rgb(0, 95, 153, 0.2);
+}
+
+.exercisesSubmenuButton:pressed{
+    -fx-background-color: rgb(0, 95, 153, 0.3);
 }
 
 .imageViewLabel{

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.edyslex.controllers.exercises.exercise4.Exercise4Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.edyslex.controllers.exercises.exercise4.Exercise4_1Controller">
    <children>
       <Pane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to left bottom, #fff5b7, #ddf4ad, #b2f2af, #7cefbc, #00ead3);;" stylesheets="@../../../css/style.css">
          <children>

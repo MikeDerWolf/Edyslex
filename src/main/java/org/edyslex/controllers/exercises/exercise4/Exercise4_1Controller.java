@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.*;
 
 
-public class Exercise4Controller extends ExerciseBaseController implements Initializable {
+public class Exercise4_1Controller extends ExerciseBaseController implements Initializable {
 
     @FXML
     private Label lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12,
@@ -129,12 +129,8 @@ public class Exercise4Controller extends ExerciseBaseController implements Initi
 
     }
 
-    public void back(ActionEvent event) throws IOException {
-        switchScene(event, "scenes/exercises/exercises.fxml");
-    }
-
     public void reset(ActionEvent event) throws IOException {
-        switchScene(event, "scenes/exercises/exercise4/exercise4.fxml");
+        switchScene(event, "scenes/exercises/exercise4/exercise4_1.fxml");
     }
 
 }

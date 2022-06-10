@@ -82,10 +82,6 @@ public class Exercise7_1Controller extends ExerciseBaseController implements Ini
 
     }
 
-    public void back(ActionEvent event) throws IOException {
-        switchScene(event, "scenes/exercises/exercise7/exercise7_menu.fxml");
-    }
-
     public void reset(ActionEvent event) throws IOException {
         switchScene(event, "scenes/exercises/exercise7/exercise7_1.fxml");
     }

@@ -1,6 +1,7 @@
 package org.edyslex.controllers.exercises;
 
 import javafx.animation.PauseTransition;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
@@ -17,6 +18,7 @@ import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import org.edyslex.controllers.students.BaseController;
 
+import java.io.IOException;
 import java.util.*;
 
 public class ExerciseBaseController extends BaseController {
@@ -63,6 +65,10 @@ public class ExerciseBaseController extends BaseController {
         dialogPaneWrong.getButtonTypes().add(ButtonType.CLOSE);
         dialogPaneWrong.setPrefWidth(180);
         dialogPaneWrong.setPrefHeight(180);
+    }
+
+    public void back(ActionEvent event) throws IOException {
+        switchScene(event, "scenes/exercises/exercises.fxml");
     }
 
     public void displayFeedback(Alert alert){

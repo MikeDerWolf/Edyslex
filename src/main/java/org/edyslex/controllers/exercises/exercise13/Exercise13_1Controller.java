@@ -89,10 +89,6 @@ public class Exercise13_1Controller extends ExerciseBaseController implements In
 
     }
 
-    public void back(ActionEvent event) throws IOException {
-        switchScene(event, "scenes/exercises/exercise13/exercise13_menu.fxml");
-    }
-
     public void reset(ActionEvent event) throws IOException {
         switchScene(event, "scenes/exercises/exercise13/exercise13_1.fxml");
     }

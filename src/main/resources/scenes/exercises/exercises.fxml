@@ -35,12 +35,11 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutX="35.0" layoutY="50.0" prefHeight="700.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../css/style.css">
+            <Pane layoutX="49.0" layoutY="59.0" prefHeight="691.0" prefWidth="1102.0" styleClass="viewPane" stylesheets="@../../css/style.css">
                <children>
-                  <Pane layoutX="505.5" layoutY="5.0" prefHeight="689.0" prefWidth="589.0" styleClass="exercisesPane" />
-                  <VBox layoutX="5.5" layoutY="5.5" prefHeight="689.0" prefWidth="500.0">
+                  <VBox layoutX="1.0" layoutY="1.0" prefHeight="689.0" prefWidth="450.0">
                      <children>
-                        <Button ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise1" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButtonFirst" stylesheets="@../../css/style.css" text="➡ Identificare prima silabă și asociere" textFill="#005f99">
+                        <Button fx:id="menuBtn1" ellipsisString="" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButtonFirst" stylesheets="@../../css/style.css" text="➥ Identificare prima silabă și asociere" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
@@ -48,68 +47,458 @@
                               <Insets />
                            </VBox.margin>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise2" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Formare cuvinte după model verbal" textFill="#005f99">
+                        <Button fx:id="menuBtn2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Formare cuvinte după model verbal" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Asociere cuvânt-imagine" textFill="#005f99">
+                        <Button fx:id="menuBtn3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Asociere cuvânt-imagine" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise4" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Formează propozițiile" textFill="#005f99">
+                        <Button fx:id="menuBtn4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Formează propozițiile" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise5" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Asociere în perechi" textFill="#005f99">
+                        <Button fx:id="menuBtn5" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Asociere în perechi" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#switchToExercise5" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Identificare ordine silabe și asociere cu imagine" textFill="#005f99">
+                        <Button fx:id="menuBtn6" ellipsisString="" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Identificare ordine silabe și asociere cu imagine" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onAction="#switchToExercise7" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Asociere propoziție la imagine" textFill="#005f99">
+                        <Button fx:id="menuBtn7" ellipsisString="" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Asociere propoziție la imagine" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onAction="#switchToExercise8" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Citire propoziții și asociere la imagine" textFill="#005f99">
+                        <Button fx:id="menuBtn8" ellipsisString="" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Citire propoziții și asociere la imagine" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise9" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Identificare cuvinte cu diftongi" textFill="#005f99">
+                        <Button fx:id="menuBtn9" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Identificare cuvinte cu diftongi" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="147.0" mnemonicParsing="false" onAction="#switchToExercise10" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Citire propoziții și asociere în frază" textFill="#005f99">
+                        <Button fx:id="menuBtn10" ellipsisString="" layoutX="10.0" layoutY="147.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Citire propoziții și asociere în frază" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise11" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Corespondență cuvânt-categorie" textFill="#005f99">
+                        <Button fx:id="menuBtn11" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Corespondență cuvânt-categorie" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise12" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➡ Asociere cuvinte" textFill="#005f99">
+                        <Button fx:id="menuBtn12" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButton" stylesheets="@../../css/style.css" text="➥ Asociere cuvinte" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button ellipsisString="" layoutX="10.0" layoutY="284.0" mnemonicParsing="false" onAction="#switchToExercise13" prefHeight="53.0" prefWidth="500.0" styleClass="exercisesMenuButtonLast" stylesheets="@../../css/style.css" text="➡ Completare propoziții lacunare" textFill="#005f99">
+                        <Button fx:id="menuBtn13" ellipsisString="" layoutX="10.0" layoutY="284.0" mnemonicParsing="false" onAction="#openSubmenu" prefHeight="53.0" prefWidth="450.0" styleClass="exercisesMenuButtonLast" stylesheets="@../../css/style.css" text="➥ Completare propoziții lacunare" textFill="#005f99">
                            <font>
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </VBox>
+                  <Pane fx:id="pane0" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css" />
+                  <Pane fx:id="pane1" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="175.0" layoutY="186.0" prefHeight="318.0" prefWidth="300.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn1_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise1" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Consoanele m, l, v" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn1_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise1" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Consoanele t, c, l, s" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn1_3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise1" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Consoanele c, s, p, r" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn1_4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise1" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Consoanele m, c, p, r" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn1_5" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise1" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Consoanele m, t, c, l, r" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn1_6" ellipsisString="" layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToExercise1" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Consoanele c, p, f" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane2" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="170.0" layoutY="212.0" prefHeight="265.0" prefWidth="310.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn2_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise2" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (CV-CV)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn2_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise2" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (V-CVC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn2_3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise2" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (CVC-CVC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn2_4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise2" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte trisilabice (CV-CV-CV)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn2_5" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise2" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte trisilabice (CVC-CV-CV)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane3" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="175.0" layoutY="80.0" prefHeight="530.0" prefWidth="300.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn3_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte monosilabice (CVC1)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte monosilabice (CVC2)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte monosilabice (CVCC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte monosilabice (CCVC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_5" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (CV-CV)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_6" ellipsisString="" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (CV-CVC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_7" ellipsisString="" layoutX="10.0" layoutY="198.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (CVC-CV)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_8" ellipsisString="" layoutX="10.0" layoutY="221.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_9" ellipsisString="" layoutX="10.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte cu diftongul „oa”" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn3_10" ellipsisString="" layoutX="10.0" layoutY="292.0" mnemonicParsing="false" onAction="#switchToExercise3" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte cu grupul „chi”" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane4" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="175.0" layoutY="318.0" prefHeight="53.0" prefWidth="300.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn4_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise4" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Propoziții din patru cuvinte" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane5" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="175.0" layoutY="292.0" prefHeight="106.0" prefWidth="300.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn5_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise5" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Plural" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn5_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise5" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Diminutive" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane6" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="160.0" layoutY="186.0" prefHeight="318.0" prefWidth="330.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn6_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise6" prefHeight="53.0" prefWidth="330.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte trisilabice (CV-CV-CV)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn6_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise6" prefHeight="53.0" prefWidth="330.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte trisilabice (CV-CV-CVC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn6_3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise6" prefHeight="53.0" prefWidth="330.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte trisilabice (CVC-CV-CVC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn6_4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise6" prefHeight="53.0" prefWidth="330.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (CV-CVC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn6_5" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise6" prefHeight="53.0" prefWidth="330.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (CVC-CV)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn6_6" ellipsisString="" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#switchToExercise6" prefHeight="53.0" prefWidth="330.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Cuvinte bisilabice (CVC-CVC)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane7" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="165.0" layoutY="239.0" prefHeight="212.0" prefWidth="320.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn7_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise7" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Propoziții din trei cuvinte" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn7_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise7" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Propoziții din două cuvinte" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn7_3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise7" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Propoziții din mai multe cuvinte" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn7_4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise7" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Secvențialitate" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane8" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="175.0" layoutY="292.0" prefHeight="106.0" prefWidth="300.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn8_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise8" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ 2 propoziții la fiecare imagine" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn8_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise8" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ 3 propoziții la fiecare imagine" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane9" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="200.0" layoutY="186.0" prefHeight="318.0" prefWidth="250.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn9_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise9" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ E-EA-A" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn9_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise9" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ I-IA-A" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn9_3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise9" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ I-IE-E" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn9_4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise9" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ O-OA-A" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn9_5" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise9" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ O-OI-I" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn9_6" ellipsisString="" layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToExercise9" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ I-IO-O" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane10" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="175.0" layoutY="212.0" prefHeight="265.0" prefWidth="300.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn10_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise10" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Relație cauză-efect (pentru că)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn10_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise10" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Scop (ca să)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn10_3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise10" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Coordonare (și)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn10_4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise10" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Concesie (deși)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn10_5" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise10" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Condiționare (dacă..., o să...)" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane11" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="75.0" layoutY="186.0" prefHeight="318.0" prefWidth="500.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn11_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise11" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ mobilă - animale - zarzavat" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn11_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise11" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ jucării - haine - bijuterii" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn11_3" ellipsisString="" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToExercise11" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ mijloace de transport - fructe - băuturi" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn11_4" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise11" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ mâncăruri - obiecte de sport - materiale de construcție" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn11_5" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise11" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ alimente - instrumente muzicale - flori" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn11_6" ellipsisString="" layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToExercise11" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ rechizite școlare - condimente - păsări" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane12" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="175.0" layoutY="292.0" prefHeight="106.0" prefWidth="300.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn12_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise12" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Genitiv" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn12_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise12" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Dativ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane13" layoutX="451.0" layoutY="1.0" prefHeight="689.0" prefWidth="650.0" styleClass="exercisesPane" stylesheets="@../../css/style.css">
+                     <children>
+                        <VBox layoutX="175.0" layoutY="292.0" prefHeight="106.0" prefWidth="300.0" stylesheets="@../../css/style.css">
+                           <children>
+                              <Button fx:id="menuBtn13_1" ellipsisString="" mnemonicParsing="false" onAction="#switchToExercise13" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Lipsă verb" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="menuBtn13_2" ellipsisString="" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToExercise13" prefHeight="53.0" prefWidth="1000.0" styleClass="exercisesSubmenuButton" stylesheets="@../../css/style.css" text="➼ Lipsă diverse cuvinte" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
          </children></Pane>
