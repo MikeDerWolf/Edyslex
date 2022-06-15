@@ -39,7 +39,8 @@ public class Report {
 
     public Report(){}
 
-    public Report(LocalDate dateOfReport, String priorities, String difficulties, String progress, String observations) {
+    public Report(LocalDate dateOfReport, String priorities, String difficulties, String progress, String observations)
+    {
         this.dateOfReport = dateOfReport;
         this.priorities = priorities;
         this.difficulties = difficulties;

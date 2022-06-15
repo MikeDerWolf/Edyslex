@@ -8,6 +8,7 @@ import javafx.stage.StageStyle;
 import javafx.util.StringConverter;
 import org.edyslex.Main;
 import org.edyslex.models.Student;
+import org.edyslex.utils.CustomAlert;
 import org.hibernate.Transaction;
 
 import java.io.IOException;
@@ -147,16 +148,6 @@ public class ModifyStudentController extends BaseController implements Initializ
 
     }
 
-    public void createAlert(Alert.AlertType alertType, String headerText, String content){
-        Alert alert = new Alert(alertType);
-        DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add("css/style.css");
-        alert.initStyle(StageStyle.UNDECORATED);
-        alert.setHeaderText(headerText);
-        alert.setContentText(content);
-        alert.show();
-    }
-
     public void modifyStudent(ActionEvent event){
         String firstName, lastName, medicalDiagnosis, speechDiagnosis, gender, dateString;
         Integer schoolClass;
@@ -172,12 +163,12 @@ public class ModifyStudentController extends BaseController implements Initializ
         //check last name criteria
         lastName = lastNameTextField.getText();
         if(lastName.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Numele elevului lipsește!");
             return;
         }
         if(lastName.length() > 45){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Lungimea maximă a numelui \neste 45 de caractere!");
             return;
         }
@@ -185,12 +176,12 @@ public class ModifyStudentController extends BaseController implements Initializ
         //check first name criteria
         firstName = firstNameTextField.getText();
         if(firstName.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Prenumele elevului lipsește!");
             return;
         }
         if(firstName.length() > 45){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Lungimea maximă a prenumelui \neste 45 de caractere!");
             return;
         }
@@ -198,7 +189,7 @@ public class ModifyStudentController extends BaseController implements Initializ
         //check birth date
         dateString = birthDatePicker.getEditor().getText();
         if(dateString.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Data nașterii lipsește!");
             return;
         }
@@ -208,7 +199,7 @@ public class ModifyStudentController extends BaseController implements Initializ
                 throw new Exception();
             }
         } catch(Exception e){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Data nașterii este invalidă!");
             return;
         }
@@ -223,7 +214,7 @@ public class ModifyStudentController extends BaseController implements Initializ
         //check gender
         gender = genderComboBox.getValue();
         if(gender == null){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Sexul elevului lipsește!");
             return;
         }
@@ -231,7 +222,7 @@ public class ModifyStudentController extends BaseController implements Initializ
         //check program entry date
         dateString = dateOfEntryDatePicker.getEditor().getText();
         if(dateString.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Data intrării în program lipsește!");
             return;
         }
@@ -241,7 +232,7 @@ public class ModifyStudentController extends BaseController implements Initializ
                 throw new Exception();
             }
         } catch(Exception e){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Data intrării în program este invalidă!");
             return;
         }
@@ -257,7 +248,7 @@ public class ModifyStudentController extends BaseController implements Initializ
                     throw new Exception();
                 }
             } catch(Exception e){
-                createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+                CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                         "Data ieșirii din program este invalidă!");
                 return;
             }
@@ -266,12 +257,12 @@ public class ModifyStudentController extends BaseController implements Initializ
         //check medical diagnosis
         medicalDiagnosis = medicalDiagnosisTextArea.getText();
         if(medicalDiagnosis.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Diagnosticul medical lipsește!");
             return;
         }
         if(medicalDiagnosis.length() > 5000){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Lungimea maximă a diagnosticului medical \neste 5000 de caractere!");
             return;
         }
@@ -279,12 +270,12 @@ public class ModifyStudentController extends BaseController implements Initializ
         //check speech diagnosis
         speechDiagnosis = speechDiagnosisTextArea.getText();
         if(speechDiagnosis.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Diagnosticul logopedic lipsește!");
             return;
         }
         if(speechDiagnosis.length() > 5000){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Lungimea maximă a diagnosticului logopedic \neste 5000 de caractere!");
             return;
         }
@@ -310,9 +301,9 @@ public class ModifyStudentController extends BaseController implements Initializ
         if(alert.showAndWait().get() == ButtonType.OK) {
             Transaction transaction = null;
             try {
-                transaction = Main.session.getTransaction();
+                transaction = Main.getSession().getTransaction();
                 transaction.begin();
-                Main.session.update(student);
+                Main.getSession().update(student);
                 transaction.commit();
                 switchToStudents(event);
             } catch (Exception e){

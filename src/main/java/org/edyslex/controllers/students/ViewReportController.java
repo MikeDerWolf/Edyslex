@@ -10,14 +10,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import org.edyslex.models.Report;
 import org.edyslex.models.Student;
+import org.edyslex.utils.CustomAlert;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -117,16 +116,6 @@ public class ViewReportController extends BaseController {
 
     }
 
-    public void createAlert(Alert.AlertType alertType, String headerText, String content){
-        Alert alert = new Alert(alertType);
-        DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add("css/style.css");
-        alert.initStyle(StageStyle.UNDECORATED);
-        alert.setHeaderText(headerText);
-        alert.setContentText(content);
-        alert.show();
-    }
-
     public void saveReport(ActionEvent event) {
         String filename = new StringBuilder().append("raport_").append(report.getId().toString()).append("_")
                 .append(student.getLastName()).append("_").append(student.getFirstName()).append("_")
@@ -161,7 +150,7 @@ public class ViewReportController extends BaseController {
                 document.close();
             }
             catch (Exception e) {
-                createAlert(Alert.AlertType.ERROR, "EXPORT EȘUAT",
+                CustomAlert.createAlert(Alert.AlertType.ERROR, "EXPORT EȘUAT",
                         "Raportul nu a putut fi exportat!");
             }
         }

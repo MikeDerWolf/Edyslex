@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import org.edyslex.controllers.exercises.ExerciseBaseController;
+import org.edyslex.utils.AudioPlayer;
 
 import java.io.IOException;
 import java.net.URL;
@@ -84,6 +85,10 @@ public class Exercise5_1Controller extends ExerciseBaseController implements Ini
             dragEventsSingleSlot(lbl, labelsMap);
         }
 
+    }
+
+    public void playRequirement() throws Exception{
+        AudioPlayer.play("src/main/resources/audio/ex5.wav");
     }
 
     public void reset(ActionEvent event) throws IOException {

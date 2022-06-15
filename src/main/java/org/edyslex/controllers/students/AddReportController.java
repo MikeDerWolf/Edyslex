@@ -14,6 +14,7 @@ import javafx.util.StringConverter;
 import org.edyslex.Main;
 import org.edyslex.models.Report;
 import org.edyslex.models.Student;
+import org.edyslex.utils.CustomAlert;
 import org.hibernate.Transaction;
 
 import java.io.IOException;
@@ -26,6 +27,12 @@ import java.time.format.ResolverStyle;
 import java.time.temporal.ChronoField;
 import java.util.List;
 import java.util.ResourceBundle;
+
+class BeforeDateException extends Exception {
+    public BeforeDateException(String errorMessage) {
+        super(errorMessage);
+    }
+}
 
 public class AddReportController extends BaseController implements Initializable {
 
@@ -72,16 +79,6 @@ public class AddReportController extends BaseController implements Initializable
 
     }
 
-    public void createAlert(Alert.AlertType alertType, String headerText, String content){
-        Alert alert = new Alert(alertType);
-        DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add("css/style.css");
-        alert.initStyle(StageStyle.UNDECORATED);
-        alert.setHeaderText(headerText);
-        alert.setContentText(content);
-        alert.show();
-    }
-
     public void addReport(ActionEvent event){
         String priorities, difficulties, progress, observations, dateString;
         LocalDate dateOfReport;
@@ -95,30 +92,34 @@ public class AddReportController extends BaseController implements Initializable
         //check report date
         dateString = dateOfReportDatePicker.getEditor().getText();
         if(dateString.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Data raportului lipsește!");
             return;
         }
         try {
             dateOfReport = LocalDate.parse(dateString, formatter);
             if(dateOfReport.isBefore(this.student.getDateOfEntry())){
-                throw new Exception();
+                throw new BeforeDateException("Raportul nu poate fi creat \nînainte de intrarea în program!");
             }
+        } catch(BeforeDateException e){
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+                    e.getMessage());
+            return;
         } catch(Exception e){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
-                    "Raportul nu poate fi creat \nînainte de intrarea în program!");
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+                    "Data raportului este invalidă!");
             return;
         }
 
         //check priorities criteria
         priorities = prioritiesTextArea.getText();
         if(priorities.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Secțiunea 'Priorități' nu este completată!");
             return;
         }
         if(priorities.length() > 5000){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Lungimea maximă a secțiunii 'Priorități' \neste 5000 de caractere!");
             return;
         }
@@ -126,12 +127,12 @@ public class AddReportController extends BaseController implements Initializable
         //check difficulties criteria
         difficulties = difficultiesTextArea.getText();
         if(difficulties.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Secțiunea 'Dificultăți întâmpinate' \nnu este completată!");
             return;
         }
         if(difficulties.length() > 5000){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Lungimea maximă a secțiunii \n'Dificultăți întâmpinate' este 5000 de caractere!");
             return;
         }
@@ -139,12 +140,12 @@ public class AddReportController extends BaseController implements Initializable
         //check progress criteria
         progress = progressTextArea.getText();
         if(progress.isEmpty()){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Secțiunea 'Progrese' nu este completată!");
             return;
         }
         if(progress.length() > 5000){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Lungimea maximă a secțiunii 'Progrese' \neste 5000 de caractere!");
             return;
         }
@@ -154,7 +155,7 @@ public class AddReportController extends BaseController implements Initializable
         if(observations.isEmpty()){
             observations = null;
         } else if (observations.length() > 5000){
-            createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
+            CustomAlert.createAlert(Alert.AlertType.ERROR, "DATE INVALIDE",
                     "Lungimea maximă a secțiunii 'Observații' \neste 5000 de caractere!");
             return;
         }
@@ -169,12 +170,12 @@ public class AddReportController extends BaseController implements Initializable
 
         Transaction transaction = null;
         try{
-            transaction = Main.session.getTransaction();
+            transaction = Main.getSession().getTransaction();
             transaction.begin();
-            Main.session.save(report);
+            Main.getSession().save(report);
             transaction.commit();
             switchToReports(event);
-            createAlert(Alert.AlertType.INFORMATION,
+            CustomAlert.createAlert(Alert.AlertType.INFORMATION,
                     "Adăugare efectuată cu succes!", "Raportul a fost salvat!");
         } catch (Exception e){
             if (transaction != null) {

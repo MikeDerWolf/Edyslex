@@ -14,9 +14,12 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import org.edyslex.Main;
 import org.edyslex.controllers.students.BaseController;
+import org.edyslex.utils.AudioPlayer;
 
 import java.io.IOException;
 import java.util.*;
@@ -40,6 +43,10 @@ public class ExerciseBaseController extends BaseController {
     public void initialize(){
         rightAlert.initStyle(StageStyle.UNDECORATED);
         wrongAlert.initStyle(StageStyle.UNDECORATED);
+        rightAlert.initModality(Modality.APPLICATION_MODAL);
+        wrongAlert.initModality(Modality.APPLICATION_MODAL);
+        rightAlert.initOwner(Main.getPrimaryStage());
+        wrongAlert.initOwner(Main.getPrimaryStage());
 
         rightImageView.setFitWidth(170);
         rightImageView.setFitHeight(170);
@@ -72,6 +79,12 @@ public class ExerciseBaseController extends BaseController {
     }
 
     public void displayFeedback(Alert alert){
+        if(alert == rightAlert){
+            AudioPlayer.play("src/main/resources/audio/right_answer.wav");
+        } else if(alert == wrongAlert){
+            AudioPlayer.play("src/main/resources/audio/wrong_answer.wav");
+        }
+
         PauseTransition delay = new PauseTransition(Duration.seconds(1.4));
         delay.setOnFinished(e -> alert.close());
 

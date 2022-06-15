@@ -2,6 +2,9 @@ package org.edyslex.controllers.students;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.edyslex.Main;
@@ -28,6 +32,11 @@ public class ReportsController extends BaseController {
     @FXML
     private TableColumn<Report, String> reportDateColumn;
 
+    @FXML
+    private TextField searchBar;
+
+    private ObservableList<Report> reportObservableList;
+
     private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     private Student student;
@@ -44,10 +53,40 @@ public class ReportsController extends BaseController {
                 new SimpleStringProperty(
                         cellData.getValue().getDateOfReport().format(dateFormatter)));
 
-        reportTableView.setItems(FXCollections.observableArrayList(
-                Main.session.createQuery(
+        reportObservableList = FXCollections.observableArrayList(
+                Main.getSession().createQuery(
                         "from Report r where r.student.id = :studentId ORDER BY dateOfReport DESC, id",
-                        Report.class).setParameter("studentId", this.student.getId()).list()));
+                        Report.class).setParameter("studentId", this.student.getId()).list());
+        reportTableView.setItems(reportObservableList);
+        applySearch(reportObservableList);
+    }
+
+    public void applySearch(ObservableList<Report> reportObservableList){
+        FilteredList<Report> filteredReports = new FilteredList<>(reportObservableList, p -> true);
+
+        searchBar.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredReports.setPredicate(Report -> {
+
+                if (newValue == null || newValue.isEmpty() || newValue.isBlank()){
+                    return true;
+                }
+
+                String keyword = newValue.toLowerCase();
+
+                if (("Raport #" + Report.getId().toString()).toLowerCase().contains(keyword)){
+                    return true;
+                } else if (Report.getDateOfReport().format(dateFormatter).toLowerCase().contains(keyword)){
+                    return true;
+                } else {
+                    return false;
+                }
+
+            });
+        });
+
+        SortedList<Report> sortedReports = new SortedList<>(filteredReports);
+        sortedReports.comparatorProperty().bind(reportTableView.comparatorProperty());
+        reportTableView.setItems(sortedReports);
     }
 
     public void switchToAddReport(ActionEvent event) throws IOException {
@@ -99,6 +138,8 @@ public class ReportsController extends BaseController {
         Report report = reportTableView.getSelectionModel().getSelectedItem();
         if(report != null){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.initModality(Modality.APPLICATION_MODAL);
+            alert.initOwner(Main.getPrimaryStage());
             DialogPane dialogPane = alert.getDialogPane();
             dialogPane.getStylesheets().add("css/style.css");
             ((Button) dialogPane.lookupButton(ButtonType.CANCEL)).setText("Anulare");
@@ -109,19 +150,21 @@ public class ReportsController extends BaseController {
             if(alert.showAndWait().get() == ButtonType.OK) {
                 Transaction transaction = null;
                 try {
-                    transaction = Main.session.getTransaction();
+                    transaction = Main.getSession().getTransaction();
                     transaction.begin();
-                    Main.session.delete(report);
+                    Main.getSession().delete(report);
                     transaction.commit();
                 } catch (Exception e){
                     if (transaction != null) {
                         transaction.rollback();
                     }
                 }
-                reportTableView.setItems(FXCollections.observableArrayList(
-                        Main.session.createQuery(
+                reportObservableList = FXCollections.observableArrayList(
+                        Main.getSession().createQuery(
                                 "from Report r where r.student.id = :studentId ORDER BY dateOfReport DESC, id",
-                                Report.class).setParameter("studentId", this.student.getId()).list()));
+                                Report.class).setParameter("studentId", this.student.getId()).list());
+                reportTableView.setItems(reportObservableList);
+                applySearch(reportObservableList);
             }
         }
     }

@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import org.edyslex.controllers.students.BaseController;
 
 import java.io.IOException;
@@ -13,6 +14,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ExercisesController extends BaseController implements Initializable {
+
+    @FXML
+    private VBox exercisesBox;
 
     @FXML
     private Button menuBtn1, menuBtn2, menuBtn3, menuBtn4, menuBtn5, menuBtn6, menuBtn7,
@@ -44,6 +48,27 @@ public class ExercisesController extends BaseController implements Initializable
 
     public void openSubmenu(ActionEvent event) throws IOException {
         Node button = (Node) event.getSource();
+
+        for(Node exerciseButton: exercisesBox.getChildren()){
+            exerciseButton.getStyleClass().clear();
+            if(exerciseButton == menuBtn1){
+                exerciseButton.getStyleClass().add("exercisesMenuButtonFirst");
+            } else if (exerciseButton == menuBtn13) {
+                exerciseButton.getStyleClass().add("exercisesMenuButtonLast");
+            } else{
+                exerciseButton.getStyleClass().add("exercisesMenuButton");
+            }
+        }
+
+        button.getStyleClass().clear();
+        if(button == menuBtn1){
+            button.getStyleClass().add("selectedMenuButtonFirst");
+        } else if (button == menuBtn13) {
+            button.getStyleClass().add("selectedMenuButtonLast");
+        } else{
+            button.getStyleClass().add("selectedMenuButton");
+        }
+
         if(button == menuBtn1){
             pane1.toFront();
         } else if (button == menuBtn2) {
@@ -132,7 +157,7 @@ public class ExercisesController extends BaseController implements Initializable
         String scenePath = null;
         Node button = (Node) event.getSource();
         if(button == menuBtn6_1){
-            scenePath = "scenes/exercises/exercise5/exercise5_1.fxml";
+            scenePath = "scenes/exercises/exercise6/exercise6_1.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);

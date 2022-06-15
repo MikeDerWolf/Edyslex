@@ -6,6 +6,7 @@ import org.hibernate.annotations.Cache;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -47,12 +48,13 @@ public class Student {
     private LocalDate dateOfExit;
 
     @OneToMany(mappedBy = "student", orphanRemoval = true, cascade = CascadeType.ALL)
-    private List<Report> reports;
+    private List<Report> reports = new ArrayList<Report>();
 
     public Student(){}
 
     public Student(String firstName, String lastName, LocalDate dateOfBirth, Integer schoolClass, String gender,
-                   String medicalDiagnosis, String speechDiagnosis, LocalDate dateOfEntry, LocalDate dateOfExit) {
+                   String medicalDiagnosis, String speechDiagnosis, LocalDate dateOfEntry, LocalDate dateOfExit)
+    {
         super();
         this.firstName = firstName;
         this.lastName = lastName;

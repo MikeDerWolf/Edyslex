@@ -2,6 +2,9 @@ package org.edyslex.controllers.students;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.edyslex.Main;
@@ -34,6 +38,11 @@ public class StudentsController extends BaseController implements Initializable 
     @FXML
     private TableColumn<Student, Integer> ageColumn;
 
+    @FXML
+    private TextField searchBar;
+
+    private ObservableList<Student> studentObservableList;
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){
         studentTableView.setPlaceholder(new Label(""));
@@ -46,9 +55,41 @@ public class StudentsController extends BaseController implements Initializable 
                         Period.between(cellData.getValue().getDateOfBirth(), LocalDate.now()).getYears())
                         .asObject());
 
-        studentTableView.setItems(FXCollections.observableArrayList(
-                Main.session.createQuery(
-                        "from Student ORDER BY lastName, firstName, dateOfBirth DESC", Student.class).list()));
+        studentObservableList = FXCollections.observableArrayList(
+                Main.getSession().createNativeQuery(
+                        "select * from student ORDER BY lastName, firstName, dateOfBirth DESC", Student.class
+                ).list()
+        );
+        studentTableView.setItems(studentObservableList);
+        applySearch(studentObservableList);
+    }
+
+    public void applySearch(ObservableList<Student> studentObservableList){
+        FilteredList<Student> filteredStudents = new FilteredList<>(studentObservableList, p -> true);
+
+        searchBar.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredStudents.setPredicate(Student -> {
+
+                if (newValue == null || newValue.isEmpty() || newValue.isBlank()){
+                    return true;
+                }
+
+                String keyword = newValue.toLowerCase();
+
+                if (Student.getFirstName().toLowerCase().contains(keyword)){
+                    return true;
+                } else if (Student.getLastName().toLowerCase().contains(keyword)){
+                    return true;
+                } else {
+                    return false;
+                }
+
+            });
+        });
+
+        SortedList<Student> sortedStudents = new SortedList<>(filteredStudents);
+        sortedStudents.comparatorProperty().bind(studentTableView.comparatorProperty());
+        studentTableView.setItems(sortedStudents);
     }
 
     public void switchToAddStudent(ActionEvent event) throws IOException {
@@ -91,6 +132,8 @@ public class StudentsController extends BaseController implements Initializable 
         Student student = studentTableView.getSelectionModel().getSelectedItem();
         if(student != null){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.initModality(Modality.APPLICATION_MODAL);
+            alert.initOwner(Main.getPrimaryStage());
             DialogPane dialogPane = alert.getDialogPane();
             dialogPane.getStylesheets().add("css/style.css");
             ((Button) dialogPane.lookupButton(ButtonType.CANCEL)).setText("Anulare");
@@ -101,18 +144,22 @@ public class StudentsController extends BaseController implements Initializable 
             if(alert.showAndWait().get() == ButtonType.OK) {
                 Transaction transaction = null;
                 try {
-                    transaction = Main.session.getTransaction();
+                    transaction = Main.getSession().getTransaction();
                     transaction.begin();
-                    Main.session.delete(student);
+                    Main.getSession().delete(student);
                     transaction.commit();
                 } catch (Exception e){
                     if (transaction != null) {
                         transaction.rollback();
                     }
                 }
-                studentTableView.setItems(FXCollections.observableArrayList(
-                        Main.session.createQuery(
-                                "from Student ORDER BY lastName, firstName, dateOfBirth DESC", Student.class).list()));
+                studentObservableList = FXCollections.observableArrayList(
+                        Main.getSession().createNativeQuery(
+                                "select * from student ORDER BY lastName, firstName, dateOfBirth DESC", Student.class
+                        ).list()
+                );
+                studentTableView.setItems(studentObservableList);
+                applySearch(studentObservableList);
             }
         }
     }

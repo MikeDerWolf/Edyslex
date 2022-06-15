@@ -55,6 +55,26 @@
 	-fx-background-color: rgb(255, 255, 255, 0.6);
 }
 
+.checkButtons{
+	-fx-border-color: #005F99;
+    -fx-border-width: 1;
+    -fx-background-color: rgb(255, 255, 255, 0.3);
+    -fx-background-insets: 0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+	-fx-text-fill: #000000;
+	-fx-font-family: Cambria;
+	-fx-font-size: 18;
+	-fx-font-weight: bold;
+}
+
+.checkButtons:hover{
+	-fx-background-color: rgb(255, 255, 255, 0.5);
+}
+
+.checkButtons:pressed{
+	-fx-background-color: rgb(255, 255, 255, 0.7);
+}
 
 .menuButtons{
 	-fx-border-color: transparent;
@@ -248,6 +268,20 @@
 	-fx-text-fill: #005f99;
 }
 
+.exerciseTextField {
+	-fx-border-width: 1;
+	-fx-border-radius: 10;
+	-fx-border-color: #005f99;
+	-fx-background-radius: 10;
+	-fx-background-insets: 0;
+	-fx-background-color: #ffffff;
+	-fx-text-fill: #000000;
+	-fx-font-family: Cambria;
+    -fx-font-size: 18;
+    -fx-padding: 0;
+    -fx-border-insets: 0;
+}
+
 .generalTextArea {
 	-fx-border-width: 0;
 	-fx-border-color: #005f99;
@@ -387,7 +421,8 @@
 	-fx-background-color: #005f99;
 }
 
-.exercisesMenuButton, .exercisesMenuButtonFirst, .exercisesMenuButtonLast{
+.exercisesMenuButton, .exercisesMenuButtonFirst, .exercisesMenuButtonLast,
+.selectedMenuButton, .selectedMenuButtonFirst, .selectedMenuButtonLast{
 	-fx-border-color: transparent;
     -fx-border-width: 0;
     -fx-border-radius: 0;
@@ -399,6 +434,7 @@
     -fx-font-size: 18;
     -fx-font-weight: bold;
     -fx-alignment: center-left;
+    -fx-padding: 0 0 0 12;
 }
 
 .exercisesMenuButton:hover, .exercisesMenuButtonFirst:hover, .exercisesMenuButtonLast:hover{
@@ -409,14 +445,18 @@
     -fx-background-color: rgb(0, 95, 153, 0.3);
 }
 
-.exercisesMenuButtonFirst{
+.exercisesMenuButtonFirst, .selectedMenuButtonFirst{
 	-fx-border-radius: 10 0 0 0;
     -fx-background-radius: 10 0 0 0;
 }
 
-.exercisesMenuButtonLast{
+.exercisesMenuButtonLast, .selectedMenuButtonLast{
 	-fx-border-radius: 0 0 0 10;
     -fx-background-radius: 0 0 0 10;
+}
+
+.selectedMenuButton, .selectedMenuButtonFirst, .selectedMenuButtonLast{
+    -fx-background-color: #AAF2B1;
 }
 
 .exercisesSubmenuButton{

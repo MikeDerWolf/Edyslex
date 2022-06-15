@@ -46,7 +46,7 @@
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="backButton12" layoutX="1000.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔊" textFill="#005f99">
+                  <Button fx:id="backButton12" layoutX="1000.0" layoutY="14.0" mnemonicParsing="false" onAction="#playRequirement" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔊" textFill="#005f99">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
@@ -93,7 +93,7 @@
                            <children>
                               <ImageView fx:id="img3" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../images/exercise3/exercise3_1/img3.jpg" />
+                                    <Image url="@../../../images/exercise3/exercise3_1/img3.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="lbl3" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
@@ -121,7 +121,7 @@
                            <children>
                               <ImageView fx:id="img5" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../images/exercise3/exercise3_1/img5.jpg" />
+                                    <Image url="@../../../images/exercise3/exercise3_1/img5.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="lbl5" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
@@ -135,7 +135,7 @@
                            <children>
                               <ImageView fx:id="img6" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../images/exercise3/exercise3_1/img6.jpg" />
+                                    <Image url="@../../../images/exercise3/exercise3_1/img6.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="lbl6" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
@@ -184,7 +184,7 @@
                            <children>
                               <ImageView fx:id="img9" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../images/exercise3/exercise3_1/img9.jpg" />
+                                    <Image url="@../../../images/exercise3/exercise3_1/img9.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="lbl9" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">

@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import org.edyslex.utils.AudioPlayer;
 
 import java.io.IOException;
 
@@ -43,6 +44,7 @@ public class BaseController {
     }
 
     public void switchScene(ActionEvent event, String filename) throws IOException {
+        AudioPlayer.stop();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource(filename));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));

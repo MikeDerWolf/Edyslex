@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.layout.Pane;
 import org.edyslex.controllers.exercises.ExerciseBaseController;
+import org.edyslex.utils.AudioPlayer;
 
 import java.io.IOException;
 import java.net.URL;
@@ -123,6 +124,10 @@ public class Exercise2_1Controller extends ExerciseBaseController implements Ini
 
         }
 
+    }
+
+    public void playRequirement() throws Exception{
+        AudioPlayer.play("src/main/resources/audio/ex2.wav");
     }
 
     public void reset(ActionEvent event) throws IOException {
