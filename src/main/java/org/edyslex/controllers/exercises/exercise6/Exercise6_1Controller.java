@@ -119,8 +119,10 @@ public class Exercise6_1Controller extends ExerciseBaseController implements Ini
             if(counterValue >= 2){
                 List<String> answerSyllables = syllables.get(index);
                 for(int i=0; i<textFields.size(); i++){
-                    ((TextField) textFields.get(i)).setText(answerSyllables.get(i));
-                    ((TextField) textFields.get(i)).setEditable(false);
+                    ((TextField) textFields.get(i))
+                            .setText(answerSyllables.get(i));
+                    ((TextField) textFields.get(i))
+                            .setEditable(false);
                 }
                 button.setDisable(true);
 

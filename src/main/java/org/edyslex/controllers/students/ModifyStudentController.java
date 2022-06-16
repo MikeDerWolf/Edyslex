@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.StageStyle;
 import javafx.util.StringConverter;
 import org.edyslex.Main;
@@ -295,6 +296,8 @@ public class ModifyStudentController extends BaseController implements Initializ
         dialogPane.getStylesheets().add("css/style.css");
         ((Button) dialogPane.lookupButton(ButtonType.CANCEL)).setText("Anulare");
         alert.initStyle(StageStyle.UNDECORATED);
+        alert.initModality(Modality.APPLICATION_MODAL);
+        alert.initOwner(Main.getPrimaryStage());
         alert.setTitle("Modificare elev");
         alert.setContentText("Doriți să modificați datele elevului?");
         alert.setHeaderText("Confirmare");

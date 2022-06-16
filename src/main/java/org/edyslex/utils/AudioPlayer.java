@@ -16,7 +16,9 @@ public class AudioPlayer {
         }
 
         audioInputStream =
-                AudioSystem.getAudioInputStream(new File(filePath).getAbsoluteFile());
+                AudioSystem.getAudioInputStream(
+                        new File(filePath).getAbsoluteFile()
+                );
 
         clip = AudioSystem.getClip();
         clip.open(audioInputStream);

@@ -77,10 +77,16 @@ public class Exercise2_1Controller extends ExerciseBaseController implements Ini
             int finalI = i;
             labels.get(i).setOnMouseDragReleased(new EventHandler<MouseDragEvent>() {
                 public void handle(MouseDragEvent event) {
-                    Parent pane = labels.get(finalI).getParent();
 
-                    if((finalI % 2 == 0 && leftSideTags.contains(currentLabel.getText())) ||
-                            (finalI % 2 == 1 && rightSideTags.contains(currentLabel.getText()))){
+                    if((finalI % 2 == 0 &&
+                            leftSideTags.contains(
+                                    currentLabel.getText()
+                            )) ||
+                            (finalI % 2 == 1 &&
+                                    rightSideTags.contains(
+                                            currentLabel.getText()
+                                    )))
+                    {
                         labels.get(finalI).setText(labelContent);
                         labels.get(finalI).setDisable(true);
                         labels.get(finalI).setOpacity(1);
@@ -98,9 +104,12 @@ public class Exercise2_1Controller extends ExerciseBaseController implements Ini
                 public void handle(MouseDragEvent event) {
                     Parent pane = labels.get(finalI).getParent();
                     if(noOfCompletedChildren((Pane) pane) == 2) {
-                        Label leftChild = (Label) ((Pane) pane).getChildren().get(0);
-                        Label rightChild = (Label) ((Pane) pane).getChildren().get(1);
-                        String word =  leftChild.getText() + rightChild.getText();
+                        Label leftChild = (Label) ((Pane) pane)
+                                .getChildren().get(0);
+                        Label rightChild = (Label) ((Pane) pane)
+                                .getChildren().get(1);
+                        String word =  leftChild.getText() +
+                                rightChild.getText();
 
                         if(words.contains(word)){
                             displayFeedback(rightAlert);

@@ -81,7 +81,6 @@ public class Exercise4_1Controller extends ExerciseBaseController implements Ini
             int finalI = i;
             labels.get(i).setOnMouseDragReleased(new EventHandler<MouseDragEvent>() {
                 public void handle(MouseDragEvent event) {
-                    Parent pane = labels.get(finalI).getParent();
 
                     if((finalI % 2 == 0 && leftSideTags.contains(currentLabel.getText())) ||
                             (finalI % 2 == 1 && rightSideTags.contains(currentLabel.getText()))){

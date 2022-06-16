@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.StringConverter;
@@ -176,6 +177,8 @@ public class ModifyReportController extends BaseController implements Initializa
         dialogPane.getStylesheets().add("css/style.css");
         ((Button) dialogPane.lookupButton(ButtonType.CANCEL)).setText("Anulare");
         alert.initStyle(StageStyle.UNDECORATED);
+        alert.initModality(Modality.APPLICATION_MODAL);
+        alert.initOwner(Main.getPrimaryStage());
         alert.setTitle("Modificare raport");
         alert.setContentText("Doriți să modificați datele raportului?");
         alert.setHeaderText("Confirmare");
