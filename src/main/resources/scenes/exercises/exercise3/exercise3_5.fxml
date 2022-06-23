@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.edyslex.controllers.exercises.exercise3.Exercise3_5Controller">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to left bottom, #fff5b7, #ddf4ad, #b2f2af, #7cefbc, #00ead3);;" stylesheets="@../../../css/style.css">
+         <children>
+            <Pane fx:id="stageBar1" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0" stylesheets="@../../../css/style.css">
+               <children>
+                  <Button fx:id="closeButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="X" textFill="#005f99">
+                     <font>
+                        <Font name="Rockwell Extra Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="minimizeButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="—" textFill="#005f99">
+                     <font>
+                        <Font name="Cooper Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton" layoutX="3.0" layoutY="3.0" mnemonicParsing="false" onAction="#back" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🢀" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton11" layoutX="46.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🏠" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="50.0" layoutY="50.0" prefHeight="700.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../../css/style.css">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Potrivește cuvântul la imaginea corespunzătoare!">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backButton12" layoutX="1000.0" layoutY="14.0" mnemonicParsing="false" onAction="#playRequirement" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔊" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton1" layoutX="1045.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔄" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <HBox layoutY="50.0" prefHeight="245.0" prefWidth="1100.0" spacing="50.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img1" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img1.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Label fx:id="lbl1" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img2" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbl2" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="210.0" layoutY="30.0" prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img3" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img3.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbl3" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="390.0" layoutY="30.0" prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img4" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img4.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbl4" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="570.0" layoutY="30.0" prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img5" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img5.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbl5" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutY="295.0" prefHeight="245.0" prefWidth="1100.0" spacing="50.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img6" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img6.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Label fx:id="lbl6" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img7" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img7.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbl7" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="210.0" layoutY="30.0" prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img8" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img8.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbl8" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="390.0" layoutY="30.0" prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img9" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img9.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbl9" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="570.0" layoutY="30.0" prefHeight="200.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fx:id="img10" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise3/exercise3_5/img10.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbl10" alignment="CENTER" layoutY="180.0" prefHeight="40.0" prefWidth="160.0" styleClass="imageViewLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="ansLbl1" alignment="CENTER" layoutX="190.0" layoutY="590.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl2" alignment="CENTER" layoutX="340.0" layoutY="590.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl3" alignment="CENTER" layoutX="490.0" layoutY="590.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl4" alignment="CENTER" layoutX="640.0" layoutY="590.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl5" alignment="CENTER" layoutX="790.0" layoutY="590.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl6" alignment="CENTER" layoutX="190.0" layoutY="640.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl7" alignment="CENTER" layoutX="340.0" layoutY="640.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl8" alignment="CENTER" layoutX="490.0" layoutY="640.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl9" alignment="CENTER" layoutX="640.0" layoutY="640.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl10" alignment="CENTER" layoutX="790.0" layoutY="640.0" prefHeight="40.0" prefWidth="120.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></Pane>
+   </children>
+</AnchorPane>
