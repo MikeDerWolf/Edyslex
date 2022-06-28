@@ -18,6 +18,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.edyslex.Main;
+import org.edyslex.controllers.BaseController;
 import org.edyslex.models.Student;
 import org.hibernate.Transaction;
 

@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.util.StringConverter;
 import org.edyslex.Main;
+import org.edyslex.controllers.BaseController;
 import org.edyslex.models.Student;
 import org.edyslex.utils.CustomAlert;
 import org.hibernate.Transaction;

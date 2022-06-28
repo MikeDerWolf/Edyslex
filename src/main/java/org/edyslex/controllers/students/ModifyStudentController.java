@@ -8,6 +8,7 @@ import javafx.stage.Modality;
 import javafx.stage.StageStyle;
 import javafx.util.StringConverter;
 import org.edyslex.Main;
+import org.edyslex.controllers.BaseController;
 import org.edyslex.models.Student;
 import org.edyslex.utils.CustomAlert;
 import org.hibernate.Transaction;

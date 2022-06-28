@@ -18,7 +18,7 @@ import javafx.stage.Modality;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import org.edyslex.Main;
-import org.edyslex.controllers.students.BaseController;
+import org.edyslex.controllers.BaseController;
 import org.edyslex.utils.AudioPlayer;
 
 import java.io.IOException;

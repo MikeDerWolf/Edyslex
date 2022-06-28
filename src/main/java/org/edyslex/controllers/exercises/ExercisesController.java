@@ -7,7 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import org.edyslex.controllers.students.BaseController;
+import org.edyslex.controllers.BaseController;
 
 import java.io.IOException;
 import java.net.URL;

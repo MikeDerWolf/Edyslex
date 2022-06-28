@@ -1,4 +1,4 @@
-package org.edyslex.controllers.students;
+package org.edyslex.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

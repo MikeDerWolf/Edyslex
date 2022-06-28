@@ -3,6 +3,7 @@ package org.edyslex.controllers.students;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import org.edyslex.controllers.BaseController;
 import org.edyslex.models.Student;
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;

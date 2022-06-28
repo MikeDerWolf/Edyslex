@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.edyslex.controllers.BaseController;
 import org.edyslex.models.Report;
 import org.edyslex.models.Student;
 import org.edyslex.utils.CustomAlert;

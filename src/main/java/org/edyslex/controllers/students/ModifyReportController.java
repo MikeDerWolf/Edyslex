@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.StringConverter;
 import org.edyslex.Main;
+import org.edyslex.controllers.BaseController;
 import org.edyslex.models.Report;
 import org.edyslex.models.Student;
 import org.edyslex.utils.CustomAlert;
