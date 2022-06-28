@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.edyslex.controllers.exercises.exercise6.Exercise6_6Controller">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to left bottom, #fff5b7, #ddf4ad, #b2f2af, #7cefbc, #00ead3);;" stylesheets="@../../../css/style.css">
+         <children>
+            <Pane fx:id="stageBar" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0" stylesheets="@../../../css/style.css">
+               <children>
+                  <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="X" textFill="#005f99">
+                     <font>
+                        <Font name="Rockwell Extra Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="minimizeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="—" textFill="#005f99">
+                     <font>
+                        <Font name="Cooper Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton" layoutX="3.0" layoutY="3.0" mnemonicParsing="false" onAction="#back" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🢀" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton11" layoutX="46.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🏠" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="50.0" layoutY="50.0" prefHeight="700.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../../css/style.css">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Desparte cuvintele în silabe! Completează silabele sub imaginea corespunzătoare!">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backButton12" layoutX="1000.0" layoutY="14.0" mnemonicParsing="false" onAction="#playRequirement" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔊" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton1" layoutX="1045.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔄" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <HBox layoutY="50.0" prefHeight="300.0" prefWidth="1100.0" spacing="45.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img1" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img1.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane fx:id="txtPane1" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField1" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn1" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="150.0" layoutY="30.0" prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img2" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img2.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Pane fx:id="txtPane2" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField1" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField11" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn2" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="470.0" layoutY="30.0" prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img3" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img3.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Pane fx:id="txtPane3" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField11" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField112" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn3" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="430.0" layoutY="30.0" prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img4" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img4.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Pane fx:id="txtPane4" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField112" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField1122" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn4" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="630.0" layoutY="30.0" prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img5" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img5.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Pane fx:id="txtPane5" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField1122" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField11222" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn5" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutY="360.0" prefHeight="300.0" prefWidth="1100.0" spacing="80.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img6" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img6.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Pane fx:id="txtPane6" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField1" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField1" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn6" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="150.0" layoutY="30.0" prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img7" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img7.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Pane fx:id="txtPane7" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField11" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField11" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn7" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="470.0" layoutY="30.0" prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img8" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img8.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Pane fx:id="txtPane8" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField111" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField1121" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn8" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="790.0" layoutY="30.0" prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <ImageView fx:id="img9" fitHeight="160.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/exercise6/exercise6_6/img9.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Pane fx:id="txtPane9" layoutY="180.0" prefHeight="36.0" prefWidth="180.0">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField1111" alignment="CENTER" focusTraversable="false" layoutX="31.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lastNameTextField11211" alignment="CENTER" focusTraversable="false" layoutX="93.0" prefHeight="36.0" prefWidth="56.0" styleClass="exerciseTextField" stylesheets="@../../../css/style.css">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="checkBtn9" ellipsisString="" focusTraversable="false" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" onAction="#check" prefHeight="36.0" prefWidth="120.0" styleClass="checkButtons" stylesheets="@../../../css/style.css" text="VERIFICĂ" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="70.0" right="70.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </Pane>
+         </children></Pane>
+   </children>
+</AnchorPane>

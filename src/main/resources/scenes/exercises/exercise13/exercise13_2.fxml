@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.edyslex.controllers.exercises.exercise13.Exercise13_2Controller">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to left bottom, #fff5b7, #ddf4ad, #b2f2af, #7cefbc, #00ead3);;" stylesheets="@../../../css/style.css">
+         <children>
+            <Pane fx:id="stageBar" onMouseDragged="#setOffset" onMousePressed="#getOffset" prefHeight="35.0" prefWidth="1200.0" stylesheets="@../../../css/style.css">
+               <children>
+                  <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1165.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="X" textFill="#005f99">
+                     <font>
+                        <Font name="Rockwell Extra Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="minimizeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1132.0" layoutY="5.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="25.0" prefWidth="30.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="—" textFill="#005f99">
+                     <font>
+                        <Font name="Cooper Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton" layoutX="3.0" layoutY="3.0" mnemonicParsing="false" onAction="#back" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🢀" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton11" layoutX="46.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="29.0" prefWidth="40.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🏠" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="50.0" layoutY="50.0" prefHeight="700.0" prefWidth="1100.0" styleClass="viewPane" stylesheets="@../../../css/style.css">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Completează propozițiile cu cuvintele care se potrivesc!">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backButton12" layoutX="1000.0" layoutY="14.0" mnemonicParsing="false" onAction="#playRequirement" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔊" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton1" layoutX="1045.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="34.0" prefWidth="42.0" styleClass="windowControlButtons" stylesheets="@../../../css/style.css" text="🔄" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <HBox layoutY="70.0" prefHeight="50.0" prefWidth="1100.0" spacing="46.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="A-fa-ră este" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl1" alignment="CENTER" layoutX="149.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="se-nin." textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label fx:id="lbl2" alignment="CENTER" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="149.0" prefHeight="50.0" prefWidth="299.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="o ca-nă cu apă." textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" right="80.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutY="140.0" prefHeight="50.0" prefWidth="1100.0" spacing="46.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="299.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Ta-ma-ra a-re pan-tofi cu" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl3" alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="90.0" layoutY="10.0" prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="299.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Co-ri-na scri-e cu un" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl4" alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" right="80.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutY="210.0" prefHeight="50.0" prefWidth="1100.0" spacing="46.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Ca-lul" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl5" alignment="CENTER" layoutX="149.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="gar-dul." textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="70.0" layoutY="10.0" prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Ma-ma pu-ne" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl6" alignment="CENTER" layoutX="149.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="în su-pă." textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" right="80.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutY="280.0" prefHeight="50.0" prefWidth="1100.0" spacing="46.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="299.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Ta-ta a pes-cu-it un" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl7" alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="70.0" layoutY="10.0" prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Co-pi-lul a-re un" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl8" alignment="CENTER" layoutX="149.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="li-niș-tit." textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" right="80.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutY="350.0" prefHeight="50.0" prefWidth="1100.0" spacing="46.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Zi-na a-re" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl9" alignment="CENTER" layoutX="149.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="al-baș-tri." textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="299.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Bu-ni-ca pră-jeș-te un" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl10" alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" right="80.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="ansLbl1" alignment="CENTER" layoutX="220.0" layoutY="520.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl2" alignment="CENTER" layoutX="390.0" layoutY="520.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl3" alignment="CENTER" layoutX="560.0" layoutY="520.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl4" alignment="CENTER" layoutX="730.0" layoutY="520.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl5" alignment="CENTER" layoutX="220.0" layoutY="580.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl6" alignment="CENTER" layoutX="390.0" layoutY="580.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl7" alignment="CENTER" layoutX="560.0" layoutY="580.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl8" alignment="CENTER" layoutX="730.0" layoutY="580.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl9" alignment="CENTER" layoutX="220.0" layoutY="640.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl10" alignment="CENTER" layoutX="390.0" layoutY="640.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl11" alignment="CENTER" layoutX="560.0" layoutY="640.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ansLbl12" alignment="CENTER" layoutX="730.0" layoutY="640.0" prefHeight="40.0" prefWidth="150.0" styleClass="answerLabel" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutY="420.0" prefHeight="50.0" prefWidth="1100.0" spacing="46.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Dan ia un" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl11" alignment="CENTER" layoutX="149.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="de de-sen." textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="50.0" prefWidth="447.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="299.0" styleClass="squareLabel" stylesheets="@../../../css/style.css" text="Do-ra lo-cu-ieș-te în" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl12" alignment="CENTER" layoutX="298.0" prefHeight="50.0" prefWidth="150.0" styleClass="squareLabelSlot" stylesheets="@../../../css/style.css" textAlignment="CENTER" textFill="#005f99">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" right="80.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </Pane>
+         </children></Pane>
+   </children>
+</AnchorPane>

@@ -196,6 +196,16 @@ public class ExercisesController extends BaseController implements Initializable
         Node button = (Node) event.getSource();
         if(button == menuBtn6_1){
             scenePath = "scenes/exercises/exercise6/exercise6_1.fxml";
+        } else if(button == menuBtn6_2){
+            scenePath = "scenes/exercises/exercise6/exercise6_2.fxml";
+        } else if(button == menuBtn6_3){
+            scenePath = "scenes/exercises/exercise6/exercise6_3.fxml";
+        } else if(button == menuBtn6_4){
+            scenePath = "scenes/exercises/exercise6/exercise6_4.fxml";
+        } else if(button == menuBtn6_5){
+            scenePath = "scenes/exercises/exercise6/exercise6_5.fxml";
+        } else if(button == menuBtn6_6){
+            scenePath = "scenes/exercises/exercise6/exercise6_6.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);
@@ -207,6 +217,12 @@ public class ExercisesController extends BaseController implements Initializable
         Node button = (Node) event.getSource();
         if(button == menuBtn7_1){
             scenePath = "scenes/exercises/exercise7/exercise7_1.fxml";
+        } else if(button == menuBtn7_2){
+            scenePath = "scenes/exercises/exercise7/exercise7_2.fxml";
+        } else if(button == menuBtn7_3){
+            scenePath = "scenes/exercises/exercise7/exercise7_3.fxml";
+        } else if(button == menuBtn7_4){
+            scenePath = "scenes/exercises/exercise7/exercise7_4.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);
@@ -218,6 +234,8 @@ public class ExercisesController extends BaseController implements Initializable
         Node button = (Node) event.getSource();
         if(button == menuBtn8_1){
             scenePath = "scenes/exercises/exercise8/exercise8_1.fxml";
+        } else if(button == menuBtn8_2){
+            scenePath = "scenes/exercises/exercise8/exercise8_2.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);
@@ -229,6 +247,16 @@ public class ExercisesController extends BaseController implements Initializable
         Node button = (Node) event.getSource();
         if(button == menuBtn9_1){
             scenePath = "scenes/exercises/exercise9/exercise9_1.fxml";
+        } else if(button == menuBtn9_2){
+            scenePath = "scenes/exercises/exercise9/exercise9_2.fxml";
+        } else if(button == menuBtn9_3){
+            scenePath = "scenes/exercises/exercise9/exercise9_3.fxml";
+        } else if(button == menuBtn9_4){
+            scenePath = "scenes/exercises/exercise9/exercise9_4.fxml";
+        } else if(button == menuBtn9_5){
+            scenePath = "scenes/exercises/exercise9/exercise9_5.fxml";
+        } else if(button == menuBtn9_6){
+            scenePath = "scenes/exercises/exercise9/exercise9_6.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);
@@ -240,6 +268,14 @@ public class ExercisesController extends BaseController implements Initializable
         Node button = (Node) event.getSource();
         if(button == menuBtn10_1){
             scenePath = "scenes/exercises/exercise10/exercise10_1.fxml";
+        } else if(button == menuBtn10_2){
+            scenePath = "scenes/exercises/exercise10/exercise10_2.fxml";
+        } else if(button == menuBtn10_3){
+            scenePath = "scenes/exercises/exercise10/exercise10_3.fxml";
+        } else if(button == menuBtn10_4){
+            scenePath = "scenes/exercises/exercise10/exercise10_4.fxml";
+        } else if(button == menuBtn10_5){
+            scenePath = "scenes/exercises/exercise10/exercise10_5.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);
@@ -251,6 +287,16 @@ public class ExercisesController extends BaseController implements Initializable
         Node button = (Node) event.getSource();
         if(button == menuBtn11_1){
             scenePath = "scenes/exercises/exercise11/exercise11_1.fxml";
+        } else if(button == menuBtn11_2){
+            scenePath = "scenes/exercises/exercise11/exercise11_2.fxml";
+        } else if(button == menuBtn11_3){
+            scenePath = "scenes/exercises/exercise11/exercise11_3.fxml";
+        } else if(button == menuBtn11_4){
+            scenePath = "scenes/exercises/exercise11/exercise11_4.fxml";
+        } else if(button == menuBtn11_5){
+            scenePath = "scenes/exercises/exercise11/exercise11_5.fxml";
+        } else if(button == menuBtn11_6){
+            scenePath = "scenes/exercises/exercise11/exercise11_6.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);
@@ -262,6 +308,8 @@ public class ExercisesController extends BaseController implements Initializable
         Node button = (Node) event.getSource();
         if(button == menuBtn12_1){
             scenePath = "scenes/exercises/exercise12/exercise12_1.fxml";
+        } else if(button == menuBtn12_2){
+            scenePath = "scenes/exercises/exercise12/exercise12_2.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);
@@ -273,6 +321,8 @@ public class ExercisesController extends BaseController implements Initializable
         Node button = (Node) event.getSource();
         if(button == menuBtn13_1){
             scenePath = "scenes/exercises/exercise13/exercise13_1.fxml";
+        } else if(button == menuBtn13_2){
+            scenePath = "scenes/exercises/exercise13/exercise13_2.fxml";
         }
         if (scenePath != null){
             switchScene(event, scenePath);
