@@ -2,7 +2,6 @@ package org.edyslex.controllers;
 
 
 import javafx.event.ActionEvent;
-import org.edyslex.controllers.BaseController;
 
 import java.io.IOException;
 
